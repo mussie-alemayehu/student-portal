@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+}
+
+.input-fields {
+    width: 35%;
+    height: 100vh;
+    float: left;
+    background-color: #1C1D21;
+}
+
+.welcome {
+    width: 65%;
+    height: 100vh;
+    float: right;
+    background-color: #915FE1;
+}
