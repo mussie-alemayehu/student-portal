@@ -1,9 +1,10 @@
 .side-nav {
-    height: 84vh;
+    height: 76vh;
     width: 15%;
-    background-image: linear-gradient(to bottom, #B290E9, #915FE1);
+    padding: 4vh 20px;
+    background-image: linear-gradient(to bottom, #B290E9, #915FE1, #915FE1, #915FE1);
     border-radius: 16px;
-    text-align: center;
+    text-align: left;
 }
 
 .container {
@@ -11,4 +12,24 @@
     padding: 4vh 30px;
     border-radius: 16px;
     box-shadow: 0 0 30px -5px black;
+}
+
+.side-nav img {
+    display: block;
+    width: 40%;
+    background-color: #915FE1;
+    padding: 10px;
+    margin: 0 auto 4vh;
+    border-radius: 12px;
+    clear: both;
+}
+
+.nav-item {
+    display: block;
+    padding: 1.5vh 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: rgb(227, 223, 223);
 }
