@@ -1,22 +1,17 @@
 body {
     margin: 0;
     color: white;
-    font-family: arial;
+    font-family: "roboto", sans-serif;
     font-size: 14px;
 }
 
-.input-fields {
+/**** this section holds the styles for the left part of the screen****/
+
+.left-container {
     width: 40%;
     height: 100vh;
     float: left;
     background-color: #1C1D21;
-}
-
-.welcome {
-    width: 60%;
-    height: 100vh;
-    float: right;
-    background-color: #915FE1;
 }
 
 .inner-fields {
@@ -25,7 +20,7 @@ body {
     padding: 20vh 20% 10vh 10%;
     margin: 10vh 0 10vh 10%;
     border-radius: 10px;
-    box-shadow: -10px 10px 10px #000;
+    box-shadow: -10px 10px 20px -5px #000;
 }
 
 .description {
@@ -94,4 +89,39 @@ a.forgot-password:active {
 
 .signup:hover {
     background-color: rgb(68, 69, 72);
+}
+
+/**** this section holds the styles for the right part of the screen****/
+
+.right-container {
+    width: 60%;
+    height: 100vh;
+    float: right;
+    background-color: #915FE1;
+}
+
+.welcome {
+    width: 60%;
+    height: 50vh;
+    padding: 20vh 10% 10vh 20%;
+    margin: 10vh 10% 10vh 0;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px -5px #000;
+}
+
+.h1-1 {
+    font-size: 38px;
+    margin: 0;
+}
+
+.h1-2 {
+    font-size: 38px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.stud-img {
+    height: 30vh;
+    display: block;
+    margin: 5vh auto;
 }
