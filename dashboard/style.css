@@ -2,3 +2,11 @@ body {
     background-color: #E2D2F9;
     padding: 4vh 30px;
 }
+
+.container {
+    background-color: white;
+    padding: 4vh 30px;
+    height: 84vh;
+    border-radius: 16px;
+    box-shadow: 0 0 30px -5px black;
+}
