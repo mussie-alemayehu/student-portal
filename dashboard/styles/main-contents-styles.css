@@ -40,3 +40,17 @@ p.date-time {
     right: 50px;
     top: 15px;
 }
+
+.current-courses {
+    float: left;
+    width: 69%;
+    padding: 15px 3%;
+    background-color: red;
+}
+
+.previous-courses {
+    float: right;
+    background-color: yellow;
+    padding: 15px 2%;
+    width: 21%;
+}
