@@ -43,8 +43,12 @@ p.date-time {
 
 .current-courses {
     float: left;
-    width: 75%;
-    padding: 15px 0;
+    width: 69%;
+    background-color: #FCFCFC;
+    margin: 30px 0;
+    padding: 1vh 3%;
+    border-radius: 16px;
+    box-shadow: 0 0 30px -5px black;
 }
 
 .previous-courses {
@@ -54,7 +58,7 @@ p.date-time {
     width: 21%;
 }
 
-.current-courses p {
+.current-courses > p {
     font-size: 20px;
     font-weight: bold;
     font-family: sans-serif;
@@ -62,9 +66,43 @@ p.date-time {
 
 .course-item {
     display: inline-block;
+    position: relative;
     width: 43%;
-    padding: 12px 4% 12px 0;
-    margin: 12px 2% 12px 0;
+    padding: 12px 2%;
+    margin: 12px 1% 12px 1%;
+    background-color: #DFCFF6;
+    border-radius: 12px;
+}
+
+.course-item > div {
+    color: #915FE1;
+    font-family: sans-serif;
+    font-weight: bold; 
+    display: inline-block;
+    width: 60%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.course-item button {
+    color: white;
+    background-color: #915FE1;
+    padding: 10px;
+    display: inline-block;
+    width: 50%;
     height: 40px;
-    background-color: antiquewhite;
+    border: none;
+    border-radius: 20px;
+}
+
+.course-item button:hover {
+    background-color: #7842cf;
+}
+
+.course-item > img {
+    width: 30%;
+    position: relative;
+    left: 65%;
+
 }
