@@ -43,14 +43,28 @@ p.date-time {
 
 .current-courses {
     float: left;
-    width: 69%;
-    padding: 15px 3%;
-    background-color: red;
+    width: 75%;
+    padding: 15px 0;
 }
 
 .previous-courses {
     float: right;
     background-color: yellow;
-    padding: 15px 2%;
+    padding: 15px 4% 15px 0;
     width: 21%;
+}
+
+.current-courses p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.course-item {
+    display: inline-block;
+    width: 43%;
+    padding: 12px 4% 12px 0;
+    margin: 12px 2% 12px 0;
+    height: 40px;
+    background-color: antiquewhite;
 }
