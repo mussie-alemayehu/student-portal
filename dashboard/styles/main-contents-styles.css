@@ -53,12 +53,14 @@ p.date-time {
 
 .previous-courses {
     float: right;
-    background-color: yellow;
-    padding: 15px 4% 15px 0;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 1%;
+    margin: 30px 0 30px 2%;
+    border-radius: 16px;
     width: 21%;
 }
 
-.current-courses > p {
+.section-header {
     font-size: 20px;
     font-weight: bold;
     font-family: sans-serif;
@@ -75,14 +77,17 @@ p.date-time {
 }
 
 .course-item > div {
-    color: #915FE1;
-    font-family: sans-serif;
-    font-weight: bold; 
     display: inline-block;
     width: 60%;
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+.course-name {
+    color: #915FE1;
+    font-family: sans-serif;
+    font-weight: bold; 
 }
 
 .course-item button {
@@ -105,4 +110,17 @@ p.date-time {
     position: relative;
     left: 65%;
 
+}
+
+.previous-course-item {
+    width: 80%;
+    background-color: #DFCFF6;
+    border-radius: 12px;
+    padding: 6px 12px;
+}
+
+.course-name span {
+    display: inline-block;
+    width: 40%;
+    margin: 5%;
 }
