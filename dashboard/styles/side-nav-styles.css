@@ -18,12 +18,14 @@
     clear: both;
 }
 
-.nav-item {
-    display: block;
-    padding: 1.5vh 0;
-}
-
 .nav-item a {
     text-decoration: none;
     color: rgb(227, 223, 223);
+    padding: 1vh;
+    display: block;
+    border-radius: 8px;
+}
+
+.nav-item a:hover {
+    background-color:#B290E9;
 }
