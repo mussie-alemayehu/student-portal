@@ -1,0 +1,26 @@
+.results {
+    width: 75%;
+    float: right;
+    padding: 40px 2%;
+}
+
+.results table tr {
+    border: solid 1px rgb(199, 199, 199);
+}
+
+.results table td {
+    padding: 10px 2%;
+}
+
+.results table thead {
+    font-weight: bold;
+    background-color: #F9F9F9;
+    color: #915FE1;
+}
+
+.results table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px -3px black;
+}
