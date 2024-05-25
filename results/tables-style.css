@@ -24,3 +24,7 @@
     background-color: white;
     box-shadow: 0 0 10px -3px black;
 }
+
+tr.footer {
+    background-color: #F9F9F9;
+}
