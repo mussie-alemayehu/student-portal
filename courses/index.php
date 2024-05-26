@@ -27,48 +27,20 @@
     <div class="main-contents">
         <div class="current-courses">
             <p class="section-header">You are currently taking the following courses:</p>
-            <div class="course-item">
-                <div>
-                    <p class="course-name">Object-Oriented Programming</p>
-                    <p class="credit">Credit Hour: 3</p>
+
+            <?php
+            for ($i = 0; $i < 6; $i++) {
+                echo '
+                <div class="course-item">
+                    <div>
+                        <p class="course-name">Object-Oriented Programming</p>
+                        <p class="credit">Credit Hour: 3</p>
+                    </div>
+                    <img src="../education-hat.png" alt="course-icon">
                 </div>
-                <img src="../education-hat.png" alt="course-icon">
-            </div>
-            <div class="course-item">
-                <div>
-                    <p class="course-name">Object-Oriented Programming</p>
-                    <p class="credit">Credit Hour: 3</p>
-                </div>
-                <img src="../education-hat.png" alt="course-icon">
-            </div>
-            <div class="course-item">
-                <div>
-                    <p class="course-name">Object-Oriented Programming</p>
-                    <p class="credit">Credit Hour: 3</p>
-                </div>
-                <img src="../education-hat.png" alt="course-icon">
-            </div>
-            <div class="course-item">
-                <div>
-                    <p class="course-name">Object-Oriented Programming</p>
-                    <p class="credit">Credit Hour: 3</p>
-                </div>
-                <img src="../education-hat.png" alt="course-icon">
-            </div>
-            <div class="course-item">
-                <div>
-                    <p class="course-name">Object-Oriented Programming</p>
-                    <p class="credit">Credit Hour: 3</p>
-                </div>
-                <img src="../education-hat.png" alt="course-icon">
-            </div>
-            <div class="course-item">
-                <div>
-                    <p class="course-name">Object-Oriented Programming</p>
-                    <p class="credit">Credit Hour: 3</p>
-                </div>
-                <img src="../education-hat.png" alt="course-icon">
-            </div>
+                ';
+            }
+            ?>
         </div>
         <div class="previous-courses">
             <p class="section-header">Previous courses</p>

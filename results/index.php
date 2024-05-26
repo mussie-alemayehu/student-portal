@@ -20,13 +20,15 @@
 </head>
 
 <body>
+
     <?php
-        // include the side navigation bar 
-        include("../side-nav.php"); 
+    // include the side navigation bar 
+    include("../side-nav.php");
     ?>
+
     <div class="results">
         <table cell-spacing="0">
-            <thead >
+            <thead>
                 <td class="code">Course code</td>
                 <td class="title">Course title</td>
                 <td class="credit">Credit</td>
@@ -34,57 +36,24 @@
                 <td class="point">Grade Point</td>
             </thead>
             <tbody>
-                <tr>
-                    <td class="code">CS101</td>
-                    <td class="title">Intro to Programming</td>
-                    <td class="credit">3</td>
-                    <td class="grade">A+</td>
-                    <td class="point">4</td>
-                </tr>
-                <tr>
-                    <td class="code">CS101</td>
-                    <td class="title">Intro to Programming</td>
-                    <td class="credit">3</td>
-                    <td class="grade">A+</td>
-                    <td class="point">4</td>
-                </tr>
-                <tr>
-                    <td class="code">CS101</td>
-                    <td class="title">Intro to Programming</td>
-                    <td class="credit">3</td>
-                    <td class="grade">A+</td>
-                    <td class="point">4</td>
-                </tr>
-                <tr>
-                    <td class="code">CS101</td>
-                    <td class="title">Intro to Programming</td>
-                    <td class="credit">3</td>
-                    <td class="grade">A+</td>
-                    <td class="point">4</td>
-                </tr>
-                <tr>
-                    <td class="code">CS101</td>
-                    <td class="title">Intro to Programming</td>
-                    <td class="credit">3</td>
-                    <td class="grade">A+</td>
-                    <td class="point">4</td>
-                </tr>
-                <tr>
-                    <td class="code">CS101</td>
-                    <td class="title">Intro to Programming</td>
-                    <td class="credit">3</td>
-                    <td class="grade">A+</td>
-                    <td class="point">4</td>
-                </tr>
-                <tr class="footer">
-                    <td colspan="2">Total credit taken: 18</td>
-                    <td>SGPA: 4</td>
-                    <td colspan="2">CGPA: 4</td>
-                </tr>
+                
+                <?php
+                for ($i = 0; $i < 6; $i++) {
+                    echo '
+                    <tr>
+                        <td class="code">CS101</td>
+                        <td class="title">Intro to Programming</td>
+                        <td class="credit">3</td>
+                        <td class="grade">A+</td>
+                        <td class="point">4</td>
+                    </tr>';
+                }
+                ?>
+                
             </tbody>
         </table>
     </div>
-    
+
 </body>
 
 </html>

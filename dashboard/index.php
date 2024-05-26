@@ -20,10 +20,12 @@
 </head>
 
 <body>
+
     <?php
-        // include the side navigation bar 
-        include("../side-nav.php"); 
+    // include the side navigation bar 
+    include("../side-nav.php");
     ?>
+
     <div class="main-contents">
         <div class="profile">
             <p>username</p>
@@ -34,31 +36,35 @@
             <img src="education.png" alt="education icon">
         </div>
         <div class="profile-info">
+
             <img src="user.png" alt="Student Image">
+
             <div class="header">
                 <p class="title">Student Basic Info</p>
                 <p class="subtitle">Addis Ababa University</p>
             </div>
-            <p>
-                <span class="title">Name: </span>
-                <span class="info">Mussie Alemayehu</span>
-            </p>
-            <p>
-                <span class="title">Department: </span>
-                <span class="info">Computer Science</span>
-            </p>
-            <p>
-                <span class="title">ID: </span>
-                <span class="info">UGR/0067/14</span>
-            </p>
-            <p>
-                <span class="title">College: </span>
-                <span class="info">CNCS</span>
-            </p>
-            <p>
-                <span class="title">Year: </span>
-                <span class="info">III</span>
-            </p>
+
+            <?php
+            // obtain the student information data from the database and initialize
+            $data = [
+                ['title' => 'Name', 'info' => 'Mussie Alemayehu'],
+                ['title' => 'Department', 'info' => 'Computer Science'],
+                ['title' => 'ID', 'info' => 'UGR/0067/14'],
+                ['title' => 'College', 'info' => 'CNCS'],
+                ['title' => 'Year', 'info' => 'III'],
+            ];
+
+            // display the information obtained
+            foreach ($data as ['title' => $title, 'info' => $info]) {
+                echo "
+                    <p>
+                        <span class=\"title\">$title: </span>
+                        <span class=\"info\">$info</span>
+                    </p>
+                    ";
+            }
+            ?>
+
         </div>
     </div>
 </body>
