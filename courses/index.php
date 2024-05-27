@@ -21,16 +21,15 @@
 
 <body>
     <?php
-        // include the side navigation bar 
-        include("../side-nav.php"); 
+    // include the side navigation bar 
+    include("../side-nav.php");
     ?>
     <div class="main-contents">
         <div class="current-courses">
             <p class="section-header">You are currently taking the following courses:</p>
 
             <?php
-            for ($i = 0; $i < 6; $i++) {
-                echo '
+            for ($i = 0; $i < 6; $i++) { ?>
                 <div class="course-item">
                     <div>
                         <p class="course-name">Object-Oriented Programming</p>
@@ -38,9 +37,7 @@
                     </div>
                     <img src="../education-hat.png" alt="course-icon">
                 </div>
-                ';
-            }
-            ?>
+            <?php } ?>
         </div>
         <div class="previous-courses">
             <p class="section-header">Previous courses</p>
