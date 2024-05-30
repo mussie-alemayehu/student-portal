@@ -1,5 +1,5 @@
 <?php
-$hostname="localhost";
+$hostname="localhost:3306";
 $userName="root";
 $dbpassword="";
 $dbName="signup_students";

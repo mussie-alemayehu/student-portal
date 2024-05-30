@@ -37,7 +37,7 @@ if (isset($_POST["submit"])) {
             mysqli_stmt_bind_param($stmt, "ss", $username, $password_hash);
             if (mysqli_stmt_execute($stmt)) {
                 echo "<script>alert('Signup successfully')</script>";
-                header("Location: login.php");
+                header("Location: index.php");
                 exit();
             } else {
                 $error = "Something went wrong";
@@ -71,7 +71,7 @@ if (isset($_POST["submit"])) {
                 <button class="btn" name="submit">Signup</button><br />
             </form>
             <p class="left">Already have an account?</p>
-            <a href="login.php"><button class="signup">Login</button></a>
+            <a href="index.php"><button class="signup">Login</button></a>
         </div>
     </div>
 
