@@ -125,3 +125,9 @@ a.forgot-password:active {
   display: block;
   margin: 5vh auto;
 }
+
+.error_message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
