@@ -1,127 +1,133 @@
 body {
-    margin: 0;
-    color: white;
-    font-family: "roboto", sans-serif;
-    font-size: 14px;
+  margin: 0;
+  color: white;
+  font-family: "roboto", sans-serif;
+  font-size: 14px;
 }
 
 /**** this section holds the styles for the left part of the screen****/
 
 .left-container {
-    width: 40%;
-    height: 100vh;
-    float: left;
-    background-color: #1C1D21;
+  width: 40%;
+  height: 100vh;
+  float: left;
+  background-color: #1c1d21;
 }
 
 .inner-fields {
-    width: 60%;
-    height: 50vh;
-    padding: 20vh 20% 10vh 10%;
-    margin: 10vh 0 10vh 10%;
-    border-radius: 10px;
-    box-shadow: -10px 10px 20px -5px #000;
+  width: 60%;
+  height: 50vh;
+  padding: 20vh 20% 10vh 10%;
+  margin: 10vh 0 10vh 10%;
+  border-radius: 10px;
+  box-shadow: -10px 10px 20px -5px #000;
 }
 
 .description {
-    font-size: 12;
-    color: rgb(215, 215, 215);
+  font-size: 12;
+  color: rgb(215, 215, 215);
 }
 
 .input-field {
-    width: 100%;
-    margin: 15px 0 0;
-    padding: 10px 0;
-    color: white;
-    border: none;
-    outline: 0;
-    border-bottom: solid white 1px;
-    background-color: #1C1D21;
+  width: 100%;
+  margin: 15px 0 0;
+  padding: 10px 0;
+  color: white;
+  border: none;
+  outline: 0;
+  border-bottom: solid white 1px;
+  background-color: #1c1d21;
 }
 
 .input-field:focus {
-    border-bottom: solid white 3px;
+  border-bottom: solid white 3px;
 }
 
 a.forgot-password {
-    margin: 0 0 15px;
-    padding: 15px 0;
-    color: grey;
-    font-size: 12px;
-    text-decoration: none;
-    display: inline-block;
+  margin: 0 0 15px;
+  padding: 15px 0;
+  color: grey;
+  font-size: 12px;
+  text-decoration: none;
+  display: inline-block;
 }
 
 a.forgot-password:hover {
-    color: rgb(209, 209, 209);
+  color: rgb(209, 209, 209);
 }
 
 a.forgot-password:active {
-    color: white;
+  color: white;
 }
 
 .btn {
-    width: 100%;
-    height: 30px;
-    background-color: #915FE1;
-    color: white;
-    border: none;
-    border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  background-color: #915fe1;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
 
 .btn:hover {
-    background-color: rgb(126, 74, 210);
+  background-color: rgb(126, 74, 210);
 }
 
 .left {
-    color: rgb(209, 209, 209);
-    margin-top: 10vh;
-    display: inline-block;
+  color: rgb(209, 209, 209);
+  margin-top: 10vh;
+  display: inline-block;
 }
 
 .signup {
-    padding: 10px;
-    color: rgb(215, 215, 215);
-    background-color: #333438;
-    border: none;
-    border-radius: 5px;
+  padding: 10px;
+  color: rgb(215, 215, 215);
+  background-color: #333438;
+  border: none;
+  border-radius: 5px;
 }
 
 .signup:hover {
-    background-color: rgb(68, 69, 72);
+  background-color: rgb(68, 69, 72);
 }
 
 /**** this section holds the styles for the right part of the screen****/
 
 .right-container {
-    width: 60%;
-    height: 100vh;
-    float: right;
-    background-color: #915FE1;
+  width: 60%;
+  height: 100vh;
+  float: right;
+  background-color: #915fe1;
 }
 
 .welcome {
-    width: 60%;
-    height: 50vh;
-    padding: 20vh 10% 10vh 20%;
-    margin: 10vh 10% 10vh 0;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px -5px #000;
+  width: 60%;
+  height: 50vh;
+  padding: 20vh 10% 10vh 20%;
+  margin: 10vh 10% 10vh 0;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px -5px #000;
 }
 
 .h1-1 {
-    font-size: 38px;
-    margin: 0;
+  font-size: 38px;
+  margin: 0;
 }
 
 .h1-2 {
-    font-size: 38px;
-    font-weight: 400;
-    margin: 0;
+  font-size: 38px;
+  font-weight: 400;
+  margin: 0;
 }
 
 .stud-img {
-    height: 30vh;
-    display: block;
-    margin: 5vh auto;
+  height: 30vh;
+  display: block;
+  margin: 5vh auto;
+}
+
+.error_message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
 }
