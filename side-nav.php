@@ -1,5 +1,5 @@
 <div class="side-nav">
-    <img src="../education-hat.png" alt="Education hat">
+    <img src="education-hat.png" alt="Education hat">
     <div class="nav-item">
         <a href="">
             <i class="nav-icon fa-solid fa-table-columns"></i>

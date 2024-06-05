@@ -1,12 +1,10 @@
-<?php include 'header.php'; ?>
 
 <?php
-// Start the session
 session_start();
 
-// Handle form submission
+include 'header.php';
+
 if (isset($_POST["submit"])) {
-  // Sanitize and validate user input
   $username = htmlspecialchars($_POST["username"]);
   $password = $_POST["password"];
 
@@ -30,8 +28,7 @@ if (isset($_POST["submit"])) {
         $_SESSION["username"] = $row["username"];
 
         // Redirect the user to the dashboard page and exit the script
-        echo "<script>alert('Login successfully')</script>";
-        header("Location: ../dashboard/index.php");
+        header("Location: ../index.php");
         exit(); // Prevent the default form submission behavior
       } else {
         $error = "Incorrect password";
