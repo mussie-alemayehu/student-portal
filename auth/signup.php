@@ -6,7 +6,7 @@ session_start();
 
 require_once "connection.php";
 
-if (isset($_POST["submit"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = htmlspecialchars($_POST["username"]);
     $password = $_POST["password"];
     $confirm_password = $_POST["confirm_password"];
@@ -66,6 +66,7 @@ if (isset($_POST["submit"])) {
             <button class="btn" name="submit">Signup</button><br>
         </form>
         <p class="left">Already have an account?</p>
+        <div style="display: inline-block; width: 15px"></div>
         <a href="index.php"><button class="signup">Login</button></a>
     </div>
 </div>

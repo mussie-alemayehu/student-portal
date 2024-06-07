@@ -1,3 +1,14 @@
+
+<?php
+session_start();
+
+// send the user to the login screen if there is no session info
+if (!isset($_SESSION["user_id"]) || !isset($_SESSION["username"])) {
+    header("Location: auth/index.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -54,9 +65,12 @@
             // register a click event for the logout link
             $('#logout-link').click(function(event) {
                 event.preventDefault();
-                $.post('logout.php', function() {
-                    window.location.href = 'auth/index.php';
-                });
+                var confirmation = confirm("Are you sure you want to logout?");
+                if (confirmation) {
+                    $.post('logout.php', function() {
+                        window.location.href = 'auth/index.php';
+                    });
+                }
             });
         });
     </script>
@@ -64,16 +78,7 @@
 
 <body>
 
-    <?php
-    session_start();
-
-    // send the user to the login screen if there is no session info
-    if (!isset($_SESSION["user_id"]) || !isset($_SESSION["username"])) {
-        header("Location: auth/index.php");
-        exit();
-    }
-    include("side-nav.php");
-    ?>
+    <?php include("side-nav.php"); ?>
     <!-- this is where the container where the main contents of the page will be placed -->
     <div id="main-contents">
         <?php
