@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="side-nav-styles.css">
     <link rel="stylesheet" href="dashboard/main-contents-styles.css">
+    <link rel="stylesheet" href="courses/main-contents-styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/13dd5a24f4.js" crossorigin="anonymous"></script>
     <style>
@@ -23,6 +24,11 @@
             $('#dashboard-link').click(function(event) {
                 event.preventDefault();
                 $('#main-contents').load('dashboard/index.php');
+            });
+
+            $('#courses-link').click(function(event) {
+                event.preventDefault();
+                $('#main-contents').load('courses/index.php');
             });
         });
     </script>
