@@ -4,3 +4,8 @@ body {
     padding: 4vh 30px;
 }
 
+#main-contents {
+    float: right;
+    width: 78%;
+    margin: auto;
+}
