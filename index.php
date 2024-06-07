@@ -38,7 +38,7 @@
                     ['content', 'results/results.php'],
                 ]),
             ];
-            
+
             // register click events for all the navigation items defined in the list
             for (let item of navigation) {
                 $(item.get('link_id')).click(function(event) {
@@ -46,6 +46,14 @@
                     $('#main-contents').load(item.get('content'));
                 });
             }
+
+            // register a click event for the logout link
+            $('#logout-link').click(function(event) {
+                event.preventDefault();
+                $.post('logout.php', function() {
+                    window.location.href = 'auth/index.php';
+                });
+            });
         });
     </script>
 </head>
@@ -62,8 +70,12 @@
     }
     include("side-nav.php");
     ?>
-
-    <div id="main-contents"></div>
+    <!-- this is where the container where the main contents of the page will be placed -->
+    <div id="main-contents">
+        <?php
+        include('dashboard/dashboard.php');
+        ?>
+    </div>
 
 </body>
 
