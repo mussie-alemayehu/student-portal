@@ -1,5 +1,5 @@
 
-.main-contents {
+#main-contents {
     float: right;
     width: 78%;
     margin: auto;
@@ -58,21 +58,6 @@
 .credit {
     color: #5f5668; 
 }
-
-/* .course-item button {
-    color: white;
-    background-color: #915FE1;
-    padding: 10px;
-    display: inline-block;
-    width: 50%;
-    height: 40px;
-    border: none;
-    border-radius: 20px;
-}
-
-.course-item button:hover {
-    background-color: #7842cf;
-} */
 
 .course-item > img {
     width: 100px;
