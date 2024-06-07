@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // prepare and execute the data insertion query
     $stmt = $conn->prepare("INSERT INTO student_info (student_id, full_name, email, department, college, batch, year, semesters_completed) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("issssiis", $stud_id, $fullname, $email, $department, $college, $batch, $year, $semesters_completed);
+    $stmt->bind_param("sssssiis", $stud_id, $fullname, $email, $department, $college, $batch, $year, $semesters_completed);
 
     if ($stmt->execute()) {
         // update the "profile_added" flag to indicate the user has provided the required information

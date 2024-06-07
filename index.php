@@ -3,7 +3,7 @@
 session_start();
 
 // send the user to the login screen if there is no session info
-if (!isset($_SESSION["user_id"]) || !isset($_SESSION["username"])) {
+if (!isset($_SESSION["user_id"])) {
     header("Location: auth/index.php");
     exit();
 }

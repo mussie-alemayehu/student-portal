@@ -7,44 +7,48 @@ session_start();
 require_once "connection.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = htmlspecialchars($_POST["username"]);
+    $id = strtoupper(htmlspecialchars($_POST["id"]));
     $password = $_POST["password"];
     $confirm_password = $_POST["confirm_password"];
 
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
+    if (!preg_match("/^(UGR|NSE)\/[0-9]{4}\/[0-9]{2}$/", $id)) {
+        $error = "Invalid ID format.";
+    } 
     // check if the form fields are not empty
-    if (!empty($username) && !empty($password) && !empty($confirm_password)) {
-        // check if the username already exists
-        $student_id_query = "SELECT * FROM students WHERE username = ? LIMIT 1";
+    else if (!empty($id) && !empty($password) && !empty($confirm_password)) {
+        // check if the id already exists
+        $student_id_query = "SELECT * FROM students WHERE id = ? LIMIT 1";
         $stmt = mysqli_prepare($conn, $student_id_query);
-        $stmt->bind_param("s", $username);
+        $stmt->bind_param("s", $id);
         $stmt->execute();
         $result = $stmt->get_result();
 
         if (mysqli_num_rows($result) > 0) {
-            $error = "The user with this username already exists. Please try again with a different username.";
+            $error = "The user with this ID already exists. Please try again with a different ID.";
         } elseif ($password !== $confirm_password) {
             $error = "The password didn't match, please try again.";
         } else {
             // Prepare and execute the query with prepared statements
-            $sql = "INSERT INTO students (username, password, profile_added) VALUES (?, ?, ?)";
+            $sql = "INSERT INTO students (id, password, profile_added) VALUES (?, ?, ?)";
             $stmt = mysqli_prepare($conn, $sql);
             $profile = 0;
-            $stmt->bind_param("ssi", $username, $password_hash, $profile);
+            $stmt->bind_param("ssi", $id, $password_hash, $profile);
             if ($stmt->execute()) {
+                $_SESSION["user_id"] = $id;
                 header("Location: details.php");
                 exit();
             } else {
                 $error = "Something went wrong";
             }
         }
+
+        $stmt->close();
+        $conn->close();
     } else {
         $error = "All fields are required";
     }
-
-    $stmt->close();
-    $conn->close();
 }
 ?>
 
@@ -55,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p class="description">Create a new account</p>
         <br>
         <form action="" method="post" autocomplete="off">
-            <input class="input-field" type="text" placeholder="Username" required name="username"><br>
+            <input class="input-field" type="text" placeholder="ID" required name="id"><br>
             <input class="input-field" type="password" placeholder="Password" required name="password"><br>
             <input class="input-field" type="password" placeholder="Confirm Password" required name="confirm_password"><br><br>
             <?php if (!empty($error)) : ?>
