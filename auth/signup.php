@@ -28,12 +28,12 @@ if (isset($_POST["submit"])) {
             $error = "The password didn't match, please try again.";
         } else {
             // Prepare and execute the query with prepared statements
-            $sql = "INSERT INTO students (username, password) VALUES (?, ?)";
+            $sql = "INSERT INTO students (username, password, profile_added) VALUES (?, ?, ?)";
             $stmt = mysqli_prepare($conn, $sql);
-            $stmt->bind_param("ss", $username, $password_hash);
+            $profile = 0;
+            $stmt->bind_param("ssi", $username, $password_hash, $profile);
             if ($stmt->execute()) {
-                echo "<script>alert('Signup successfully')</script>";
-                header("Location: index.php");
+                header("Location: details.php");
                 exit();
             } else {
                 $error = "Something went wrong";
@@ -53,17 +53,17 @@ if (isset($_POST["submit"])) {
     <div class="inner-fields">
         <h1>Signup</h1>
         <p class="description">Create a new account</p>
-        <br />
-        <form action="" method="post">
-            <input class="input-field" type="text" placeholder="Username" required name="username" /><br />
-            <input class="input-field" type="password" placeholder="Password" required name="password" /><br />
-            <input class="input-field" type="password" placeholder="Confirm Password" required name="confirm_password" /><br /><br />
+        <br>
+        <form action="" method="post" autocomplete="off">
+            <input class="input-field" type="text" placeholder="Username" required name="username"><br>
+            <input class="input-field" type="password" placeholder="Password" required name="password"><br>
+            <input class="input-field" type="password" placeholder="Confirm Password" required name="confirm_password"><br><br>
             <?php if (!empty($error)) : ?>
                 <div class="error_message">
                     <?php echo $error; ?>
                 </div>
             <?php endif; ?>
-            <button class="btn" name="submit">Signup</button><br />
+            <button class="btn" name="submit">Signup</button><br>
         </form>
         <p class="left">Already have an account?</p>
         <a href="index.php"><button class="signup">Login</button></a>

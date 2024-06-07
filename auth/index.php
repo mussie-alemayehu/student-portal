@@ -27,9 +27,18 @@ if (isset($_POST["submit"])) {
         $_SESSION["user_id"] = $row["id"];
         $_SESSION["username"] = $row["username"];
 
-        // Redirect the user to the dashboard page and exit the script
+        // check whether or not the user has added profile information
+        $profile_added = ($row["profile_added"] != 0);
+        
+        // if profile is not added, go to the details page
+        if (!$profile_added) {
+          header("Location: details.php");
+          exit();
+        }
+
+        // redirect the user to the dashboard page if profile is added
         header("Location: ../index.php");
-        exit(); // Prevent the default form submission behavior
+        exit();
       } else {
         $error = "Incorrect password";
       }
@@ -49,11 +58,10 @@ if (isset($_POST["submit"])) {
   <div class="inner-fields">
     <h1>Login</h1>
     <p class="description">Enter your account details</p>
-    <br />
+    <br>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-      <input class="input-field" type="text" placeholder="Username" name="username" /><br />
-      <input class="input-field" type="password" placeholder="Password" name="password" /><br />
-      <a class="forgot-password" href="">Forgot password?</a><br />
+      <input class="input-field" type="text" placeholder="Username" name="username"><br>
+      <input class="input-field" type="password" placeholder="Password" name="password"><br>
       <?php if (!empty($error)) : ?>
         <div class="error_message">
           <?php
@@ -61,7 +69,8 @@ if (isset($_POST["submit"])) {
           ?>
         </div>
       <?php endif; ?>
-      <input type="submit" name="submit" value="login" class="btn"><br />
+      <a class="forgot-password" href="">Forgot password?</a><br>
+      <input type="submit" name="submit" value="login" class="btn"><br>
     </form>
     <p class="left">Don't have an account?</p>
     <div style="display: inline-block; width: 15px"></div>
