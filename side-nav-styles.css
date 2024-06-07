@@ -26,6 +26,14 @@
     border-radius: 8px;
 }
 
+.nav-item a:active {
+    color: white;
+}
+
 .nav-item a:hover {
     background-color:#B290E9;
+}
+
+.selected {
+    background-color: #B290E9;
 }

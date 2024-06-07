@@ -1,7 +1,7 @@
 <div class="side-nav">
     <img src="education-hat.png" alt="Education hat">
     <div class="nav-item">
-        <a href="#" id="dashboard-link">
+        <a href="#" id="dashboard-link" class="selected">
             <i class="nav-icon fa-solid fa-table-columns"></i>
             Dashboard
         </a>
