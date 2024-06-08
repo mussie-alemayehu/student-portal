@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -13,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $id = htmlspecialchars($_POST["id"]);
   $password = $_POST["password"];
 
-  require_once "connection.php";
+  require_once "../connection.php";
 
   if (!empty($id) && !empty($password)) {
 
@@ -33,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // check whether or not the user has added profile information
         $profile_added = ($row["profile_added"] != 0);
-        
+
         // if profile is not added, go to the details page
         if (!$profile_added) {
           header("Location: details.php");
@@ -49,12 +48,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
       $error = "Invalid id or password";
     }
+
+    $stmt->close();
+    $conn->close();
   } else {
     $error = "All fields are required";
   }
-
-  $stmt->close();
-  $conn->close();
 }
 ?>
 
@@ -64,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <p class="description">Enter your account details</p>
     <br>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-      <input class="input-field" type="text" placeholder="id" name="id"><br>
+      <input class="input-field" type="text" placeholder="ID" name="id"><br>
       <input class="input-field" type="password" placeholder="Password" name="password"><br>
       <?php if (!empty($error)) : ?>
         <div class="error_message">

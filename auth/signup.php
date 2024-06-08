@@ -4,7 +4,7 @@
 <?php
 session_start();
 
-require_once "connection.php";
+require_once "../connection.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = strtoupper(htmlspecialchars($_POST["id"]));

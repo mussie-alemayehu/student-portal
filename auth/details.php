@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $semesters_completed = 0;
 
     // get our database connection
-    require_once "connection.php";
+    require_once "../connection.php";
 
     // prepare and execute the data insertion query
     $stmt = $conn->prepare("INSERT INTO student_info (student_id, full_name, email, department, college, batch, year, semesters_completed) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");

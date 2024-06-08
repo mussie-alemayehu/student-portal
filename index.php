@@ -7,6 +7,31 @@ if (!isset($_SESSION["user_id"])) {
     header("Location: auth/index.php");
     exit();
 }
+
+// get our database connection
+require_once "connection.php";
+
+// prepare a SQL statement to fetch information about a student with the session id
+$sql = "SELECT * FROM students WHERE id = ? LIMIT 1";
+$id = $_SESSION["user_id"];
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $profile_added = ($row["profile_added"] != 0);
+
+    // if the "profile_added" value is true, proceed with page
+    // otherwise, go to the details page because it means that the student has
+    // not provided the necessary information
+    if (!$profile_added) {
+        header("Location: auth/details.php");
+        exit();
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +92,7 @@ if (!isset($_SESSION["user_id"])) {
                 event.preventDefault();
                 var confirmation = confirm("Are you sure you want to logout?");
                 if (confirmation) {
-                    $.post('logout.php', function() {
+                    $.post('auth/logout.php', function() {
                         window.location.href = 'auth/index.php';
                     });
                 }
