@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -32,6 +31,7 @@ if (mysqli_num_rows($result) > 0) {
     }
 }
 
+$stmt->close();
 ?>
 
 <!DOCTYPE html>
@@ -88,13 +88,32 @@ if (mysqli_num_rows($result) > 0) {
             }
 
             // register a click event for the logout link
+            for (let item of navigation) {
+                $(item.get('link_id')).click(function(event) {
+                    event.preventDefault();
+                    $('.selected').removeClass('selected');
+                    $(this).addClass('selected');
+
+                    $.ajax({
+                        type: "GET",
+                        url: item.get('content'),
+                        success: function(data) {
+                            $('#main-contents').html(data);
+                        },
+                        error: function(xhr, satus, error) {
+                            $('#main-contents').html("<p>" + error + "</p>");
+                        }
+                    });
+                });
+            }
+
             $('#logout-link').click(function(event) {
                 event.preventDefault();
-                var confirmation = confirm("Are you sure you want to logout?");
-                if (confirmation) {
-                    $.post('auth/logout.php', function() {
-                        window.location.href = 'auth/index.php';
-                    });
+                $confirm = confirm("Are you sure you want to logout?");
+                if ($confirm) {
+                    window.location.href = 'auth/logout.php';
+                    window.location.href = 'auth/index.php';
+                    exit();
                 }
             });
         });
