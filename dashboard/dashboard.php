@@ -24,10 +24,18 @@ $stmt->bind_param("s", $user_id);
 if ($stmt->execute()) {
     $result = $stmt->get_result()->fetch_assoc();
     $full_name = $result["full_name"];
-    $department = $result["department"];
+    $department_id = $result["department_id"];
     $college = $result["college"];
     $year = $result["year"];
 }
+
+$stmt->close();
+
+// fetch the department name of the current user from the departments table
+$stmt = $conn->prepare("SELECT department_name FROM departments WHERE department_code = ?");
+$stmt->bind_param("s", $department_id);
+$stmt->execute();
+$department = $stmt->get_result()->fetch_assoc()["department_name"];
 
 $stmt->close();
 $conn->close();

@@ -2,6 +2,9 @@
 <?php
 session_start();
 
+// get our database connection
+require_once "../connection.php";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     // extract all the data we are going to send to the database into variables
     $stud_id = $_SESSION["user_id"];
@@ -13,11 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $year = 1;
     $semesters_completed = 0;
 
-    // get our database connection
-    require_once "../connection.php";
-
     // prepare and execute the data insertion query
-    $stmt = $conn->prepare("INSERT INTO student_info (student_id, full_name, email, department, college, batch, year, semesters_completed) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $query = "INSERT INTO student_info (student_id, full_name, email, department, college, batch, year, semesters_completed) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($query);
     $stmt->bind_param("sssssiis", $stud_id, $fullname, $email, $department, $college, $batch, $year, $semesters_completed);
 
     if ($stmt->execute()) {
@@ -35,7 +36,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $stmt->close();
-    $conn->close();
+}
+
+// prepare a new statement to fetch the list of available departments
+$stmt = $conn->prepare("SELECT * FROM departments;");
+$departments = [];
+
+if ($stmt->execute()) {
+    $result = $stmt->get_result();
+    while ($row = $result->fetch_assoc()) {
+        $departments[] = $row;
+    }
 }
 ?>
 
@@ -52,15 +63,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input class="input-field" type="email" placeholder="Email" required name="email"><br>
             <select class="input-field" required name="department">
                 <option value="">Select Department</option>
-                <option value="Computer Science">Computer Science</option>
-                <option value="Chemistry">Chemistry</option>
-                <option value="Physics">Physics</option>
-                <option value="Mathematics">Mathematics</option>
-                <option value="Information Science">Information Science</option>
-                <option value="Biology">Biology</option>
-                <option value="Business Administration">Business Administration</option>
-                <option value="Economics">Economics</option>
-                <option value="English">English</option>
+                <!-- display the departments fetched above as options -->
+                <?php foreach ($departments as $department): ?>
+                    <option value="<?php echo htmlspecialchars($department["department_code"]); ?>">
+                        <?php echo htmlspecialchars($department["department_name"]); ?>
+                    </option>
+                <?php endforeach ?>
             </select><br>
             <select class="input-field" required name="college">
                 <option value="">Select College</option>
@@ -75,4 +83,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </div>
 
-<?php include('right.php'); ?>
+<?php 
+include('right.php');
+
+$stmt->close();
+$conn->close();
+?>
