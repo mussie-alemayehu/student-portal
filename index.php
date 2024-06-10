@@ -94,19 +94,11 @@ $stmt->close();
                     $('.selected').removeClass('selected');
                     $(this).addClass('selected');
 
-                    $.ajax({
-                        type: "GET",
-                        url: item.get('content'),
-                        success: function(data) {
-                            $('#main-contents').html(data);
-                        },
-                        error: function(xhr, satus, error) {
-                            $('#main-contents').html("<p>" + error + "</p>");
-                        }
-                    });
+                    $('#main-contents').load(item.get('content'));
                 });
             }
 
+            // register a click event for the logout link and implement the logout logic
             $('#logout-link').click(function(event) {
                 event.preventDefault();
                 $confirm = confirm("Are you sure you want to logout?");
@@ -133,3 +125,4 @@ $stmt->close();
 </body>
 
 </html>
+

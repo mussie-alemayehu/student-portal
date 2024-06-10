@@ -1,14 +1,18 @@
 <?php
-$user_id = $_SESSION["user_id"];
-
 // check if session is already started and start a new one if not started
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// check if connection exists and create one if it doesn't
-if (!$conn) {
-    require_once "../connection.php";
+$user_id = $_SESSION["user_id"];
+
+// the relative path of the connection may change according to how the file is included in the main screen
+// if we are directly including it with the php include statement, it will be connection.php
+// if we are loading it using jquery, it will be ../connection.php
+if (file_exists('connection.php')) {
+    require_once 'connection.php';
+} else {
+    require_once '../connection.php';
 }
 
 // prepare a sql statement to get full information about the logged in user
@@ -16,6 +20,7 @@ $query = "SELECT * FROM student_info WHERE student_id = ?";
 $stmt = $conn->prepare($query);
 $stmt->bind_param("s", $user_id);
 
+// execute the prepared statement and extract the acquired data
 if ($stmt->execute()) {
     $result = $stmt->get_result()->fetch_assoc();
     $full_name = $result["full_name"];
@@ -46,7 +51,7 @@ $conn->close();
     </div>
 
     <?php
-    // obtain the student information data from the database and initialize
+    // initialize an associative array to easily display them later
     $data = [
         ['title' => 'Name', 'info' => $full_name],
         ['title' => 'Department', 'info' => $department],
