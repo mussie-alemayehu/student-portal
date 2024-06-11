@@ -1,0 +1,55 @@
+-- Semester 1
+'MATH101',
+'MATH102',
+'STAT101',
+'ENG101',
+'CS101',
+
+-- Semester 2
+'MATH103',
+'MATH104',
+'STAT102',
+'ENG102',
+'CS102',
+
+-- Semester 3
+'MATH201',
+'MATH202',
+'MATH203',
+'STAT201',
+'MATH204',
+
+-- Semester 4
+'MATH205',
+'MATH206',
+'MATH207',
+'STAT202',
+'MATH208',
+
+-- Semester 5
+'MATH301',
+'MATH302',
+'MATH303',
+'STAT301',
+'DATA301',
+
+-- Semester 6
+'MATH304',
+'MATH305',
+'MATH306',
+'COMP301',
+'COMP302',
+
+-- Semester 7
+'MATH401',
+'MATH402',
+'MATH403',
+'PHIL301',
+'PHIL302',
+
+-- Semester 8
+'MATH404',
+'FIN301',
+'ECON301',
+'BIOSTAT301',
+'CRYPTO301',

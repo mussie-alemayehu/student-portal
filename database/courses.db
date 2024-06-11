@@ -1,0 +1,309 @@
+
+CREATE TABLE courses (
+    course_code VARCHAR(255)  PRIMARY KEY,
+    course_name VARCHAR(255) NOT NULL,
+    credit_hours INT NOT NULL,
+    course_type VARCHAR(255)
+);
+
+# courses for computer science
+INSERT INTO courses (course_code, course_name, credit_hours, course_type) VALUES
+('CS101', 'Introduction to Programming', 4, 'Major'),
+('CS102', 'Computer Science Fundamentals', 4, 'Major'),
+('MATH101', 'Calculus I', 3, 'Supportive'),
+('ENG101', 'English Composition', 3, 'Common'),
+('PHYS101', 'Physics I', 4, 'Supportive'),
+
+('CS103', 'Data Structures', 4, 'Major'),
+('CS104', 'Web Development Basics', 4, 'Major'),
+('MATH102', 'Calculus II', 3, 'Supportive'),
+('ENG102', 'Advanced Composition', 3, 'Common'),
+('PHYS102', 'Physics II', 4, 'Supportive'),
+
+('CS201', 'Algorithms', 4, 'Major'),
+('CS202', 'Object-Oriented Programming', 4, 'Major'),
+('MATH201', 'Discrete Mathematics', 3, 'Supportive'),
+('STAT201', 'Probability and Statistics', 3, 'Supportive'),
+('ECON101', 'Microeconomics', 3, 'Common'),
+
+('CS203', 'Database Systems', 4, 'Major'),
+('CS204', 'Operating Systems', 4, 'Major'),
+('MATH202', 'Linear Algebra', 3, 'Supportive'),
+('STAT202', 'Statistical Methods', 3, 'Supportive'),
+('ECON102', 'Macroeconomics', 3, 'Common'),
+
+('CS301', 'Software Engineering', 4, 'Major'),
+('CS302', 'Computer Networks', 4, 'Major'),
+('CS303', 'Theory of Computation', 4, 'Major'),
+('MATH301', 'Differential Equations', 3, 'Supportive'),
+('CS307', 'Human-Computer Interaction', 3, 'Major'),
+
+('CS304', 'Artificial Intelligence', 4, 'Major'),
+('CS305', 'Machine Learning', 4, 'Major'),
+('CS306', 'Mobile App Development', 4, 'Major'),
+('CS308', 'Computer Graphics', 3, 'Major'),
+('CS309', 'Information Security', 3, 'Major'),
+
+('CS401', 'Advanced Algorithms', 4, 'Major'),
+('CS402', 'Data Science', 4, 'Major'),
+('CS403', 'Cybersecurity', 4, 'Major'),
+('CS404', 'Parallel Computing', 3, 'Major'),
+('CpArch', 'Computer Architecture', 3, 'Major'),
+
+('CS407', 'Cloud Computing', 4, 'Major'),
+('CS405', 'Blockchain Technology', 4, 'Major'),
+('CS406', 'Internet of Things', 4, 'Major'),
+('HIS401', 'History', 3, 'Common'),
+('LIT101', 'Introduction to Literature', 3, 'Common');
+
+
+# courses for chemistry
+INSERT INTO courses (course_code, course_name, credit_hours, course_type) VALUES
+('CHEM101', 'General Chemistry I', 4, 'Major'),
+('BIO101', 'Introduction to Biology', 4, 'Major'),
+
+('CHEM102', 'General Chemistry II', 4, 'Major'),
+('CHEM103', 'Organic Chemistry I', 4, 'Major'),
+
+('CHEM201', 'Analytical Chemistry', 4, 'Major'),
+('CHEM202', 'Physical Chemistry I', 4, 'Major'),
+('CHEM203', 'Organic Chemistry II', 4, 'Major'),
+('CHEM204', 'Inorganic Chemistry I', 4, 'Major'),
+
+('CHEM205', 'Biochemistry I', 4, 'Major'),
+('CHEM206', 'Physical Chemistry II', 4, 'Major'),
+('CHEM207', 'Inorganic Chemistry II', 4, 'Major'),
+('CHEM208', 'Environmental Chemistry', 4, 'Major'),
+('CHEM209', 'Chemical Safety and Ethics', 3, 'Major'),
+
+('CHEM301', 'Advanced Organic Chemistry', 4, 'Major'),
+('CHEM302', 'Advanced Analytical Chemistry', 4, 'Major'),
+('CHEM303', 'Polymer Chemistry', 4, 'Major'),
+('CHEM304', 'Medicinal Chemistry', 4, 'Major'),
+('CHEM305', 'Advanced Physical Chemistry', 4, 'Major'),
+
+('CHEM306', 'Advanced Inorganic Chemistry', 4, 'Major'),
+('CHEM307', 'Biochemistry II', 4, 'Major'),
+('PHIL301', 'Philosophy of Science', 3, 'Common'),
+('CHEM308', 'Quantum Chemistry', 4, 'Major'),
+('CHEM309', 'Chemical Kinetics', 4, 'Major'),
+
+('CHEM401', 'Research Methods in Chemistry', 4, 'Major'),
+('CHEM402', 'Nanotechnology in Chemistry', 4, 'Major'),
+('CHEM403', 'Spectroscopy', 4, 'Major'),
+('CHEM404', 'Materials Chemistry', 4, 'Major'),
+
+('CHEM405', 'Chemistry Capstone Project', 4, 'Major'),
+('ENV401', 'Environmental Policy and Management', 3, 'Common'),
+('BIO402', 'Advanced Genetics', 3, 'Major'),
+('PHYS403', 'Advanced Physics for Chemists', 3, 'Supportive');
+
+
+# courses for physics department
+INSERT INTO courses (course_code, course_name, credit_hours, course_type) VALUES
+
+('PHYS103', 'Modern Physics', 4, 'Major'),
+
+('PHYS201', 'Classical Mechanics', 4, 'Major'),
+('PHYS202', 'Electromagnetism I', 4, 'Major'),
+('PHYS204', 'Thermodynamics', 4, 'Major'),
+
+('PHYS203', 'Quantum Mechanics I', 4, 'Major'),
+('PHYS205', 'Electromagnetism II', 4, 'Major'),
+('PHYS206', 'Optics', 4, 'Major'),
+('PHYS207', 'Experimental Physics', 4, 'Major'),
+
+('PHYS301', 'Advanced Classical Mechanics', 4, 'Major'),
+('PHYS302', 'Advanced Electromagnetism', 4, 'Major'),
+('PHYS303', 'Quantum Mechanics II', 4, 'Major'),
+('PHYS304', 'Statistical Mechanics', 4, 'Major'),
+('ASTR301', 'Introduction to Astrophysics', 3, 'Major'),
+
+('PHYS305', 'Solid State Physics', 4, 'Major'),
+('PHYS306', 'Nuclear Physics', 4, 'Major'),
+('PHYS307', 'Particle Physics', 4, 'Major'),
+('ASTR302', 'Cosmology', 3, 'Major'),
+('ASTR303', 'Galactic Astrophysics', 3, 'Major'),
+
+('PHYS401', 'Computational Physics', 4, 'Major'),
+('PHYS402', 'General Relativity', 4, 'Major'),
+('PHYS407', 'Advanced Quantum Mechanics', 4, 'Major'),
+('ASTR401', 'High Energy Astrophysics', 3, 'Major'),
+('ASTR402', 'Exoplanets', 3, 'Major'),
+
+('PHYS404', 'Physics Capstone Project', 4, 'Major'),
+('ASTR403', 'Stellar Astrophysics', 3, 'Major'),
+('ASTR404', 'Interstellar Medium', 3, 'Major'),
+('ASTR405', 'Observational Techniques in Astrophysics', 3, 'Major'),
+('ASTR406', 'The Early Universe', 3, 'Major');
+
+
+# courses for mathematics
+INSERT INTO courses (course_code, course_name, credit_hours, course_type) VALUES
+('STAT101', 'Introduction to Statistics', 3, 'Major'),
+
+('MATH103', 'Calculus II', 4, 'Major'),
+('MATH104', 'Linear Algebra I', 4, 'Major'),
+('STAT102', 'Probability', 3, 'Major'),
+
+('MATH203', 'Abstract Algebra I', 4, 'Major'),
+('MATH204', 'Discrete Mathematics', 4, 'Major'),
+
+('MATH205', 'Real Analysis I', 4, 'Major'),
+('MATH206', 'Complex Analysis', 4, 'Major'),
+('MATH207', 'Linear Algebra II', 4, 'Major'),
+('MATH208', 'Number Theory', 4, 'Major'),
+
+('MATH302', 'Abstract Algebra II', 4, 'Major'),
+('MATH303', 'Topology', 4, 'Major'),
+('STAT301', 'Time Series Analysis', 3, 'Major'),
+('DATA301', 'Introduction to Data Science', 3, 'Major'),
+
+('MATH304', 'Partial Differential Equations', 4, 'Major'),
+('MATH305', 'Numerical Analysis', 4, 'Major'),
+('MATH306', 'Graph Theory', 4, 'Major'),
+('COMP301', 'Advanced Programming', 3, 'Major'),
+('COMP302', 'Software Engineering', 3, 'Major'),
+
+('MATH401', 'Mathematical Logic', 4, 'Major'),
+('MATH402', 'Geometry', 4, 'Major'),
+('MATH403', 'Optimization', 4, 'Major'),
+('PHIL302', 'Logic and Computation', 3, 'Major'),
+
+('MATH404', 'Mathematics Capstone Project', 4, 'Major'),
+('FIN301', 'Financial Mathematics', 3, 'Major'),
+('ECON301', 'Econometrics', 3, 'Major'),
+('BIOSTAT301', 'Biostatistics', 3, 'Major'),
+('CRYPTO301', 'Introduction to Cryptography', 3, 'Major');
+
+
+
+
+
+
+
+// I stoped here
+
+
+
+
+
+
+
+# courses for information systems
+INSERT INTO courses (course_code, course_name, credit_hours, course_type) VALUES
+('IS101', 'Introduction to Information Systems', 3, 'Major'),
+('BUS101', 'Introduction to Business', 3, 'Major'),
+
+('IS102', 'Database Fundamentals', 3, 'Major'),
+('BUS102', 'Principles of Management', 3, 'Major'),
+
+('IS201', 'Systems Analysis and Design', 3, 'Major'),
+('IS202', 'Information Systems Development', 3, 'Major'),
+('BUS201', 'Financial Accounting', 3, 'Major'),
+('BUS202', 'Marketing Principles', 3, 'Major'),
+
+('IS203', 'Business Intelligence', 3, 'Major'),
+('IS204', 'Network and Security Fundamentals', 3, 'Major'),
+('BUS203', 'Managerial Accounting', 3, 'Supportive'),
+('BUS204', 'Organizational Behavior', 3, 'Supportive'),
+
+('IS301', 'Enterprise Resource Planning', 3, 'Major'),
+('IS302', 'E-Commerce', 3, 'Major'),
+('IS303', 'Information Systems Project Management', 3, 'Major'),
+
+('IS304', 'Cloud Computing for Business', 3, 'Major'),
+('IS305', 'Data Analytics', 3, 'Major'),
+('IS306', 'Cybersecurity in Business', 3, 'Major'),
+
+('IS401', 'Advanced Database Management', 3, 'Major'),
+('IS402', 'IT Governance and Policy', 3, 'Major'),
+('IS403', 'Strategic Management of Information Systems', 3, 'Major'),
+
+('IS404', 'Information Systems Capstone Project', 3, 'Major'),
+('MKT301', 'Digital Marketing', 3, 'Major'),
+('HRM301', 'Human Resources in Technology', 3, 'Major'),
+('ENT301', 'Entrepreneurship in IT', 3, 'Major');
+
+
+# biology courses
+INSERT INTO courses (course_code, course_name, credit_hours, course_type) VALUES
+
+('BIO102', 'Cell Biology', 4, 'Major'),
+
+('BIO201', 'Genetics', 4, 'Major'),
+('BIO202', 'Microbiology', 4, 'Major'),
+('BIO203', 'Botany', 3, 'Major'),
+
+('BIO204', 'Zoology', 4, 'Major'),
+('BIO205', 'Ecology', 4, 'Major'),
+('BIO206', 'Evolutionary Biology', 3, 'Major'),
+
+('BIO301', 'Molecular Biology', 4, 'Major'),
+('BIO302', 'Immunology', 4, 'Major'),
+('BIO303', 'Developmental Biology', 4, 'Major'),
+('BIO304', 'Physiology', 3, 'Major'),
+
+('BIO305', 'Neurobiology', 4, 'Major'),
+('BIO306', 'Plant Biology', 4, 'Major'),
+('BIO307', 'Animal Behavior', 4, 'Major'),
+('BIO308', 'Conservation Biology', 3, 'Major'),
+
+('BIO401', 'Genomics', 4, 'Major'),
+('BIO403', 'Biotechnology', 4, 'Major'),
+('BIO404', 'Marine Biology', 3, 'Major'),
+('BIO405', 'Environmental Science', 3, 'Major'),
+
+('BIO406', 'Pathology', 4, 'Major'),
+('BIO407', 'Virology', 4, 'Major'),
+('BIO408', 'Forensic Biology', 4, 'Major'),
+('BIO409', 'Pharmacology', 3, 'Major'),
+('BIO410', 'Toxicology', 3, 'Major');
+
+
+# courses for English
+INSERT INTO courses (course_code, course_name, credit_hours, course_type) VALUES
+('ENG103', 'World Literature', 3, 'Major'),
+
+('ENG106', 'American Literature I', 3, 'Major'),
+('ENG107', 'British Literature I', 3, 'Major'),
+('ENG108', 'Creative Writing', 3, 'Major'),
+('ENG109', 'Critical Thinking and Writing', 3, 'Major'),
+('ENG110', 'Public Speaking', 3, 'Major'),
+
+('ENG201', 'American Literature II', 3, 'Major'),
+('ENG202', 'British Literature II', 3, 'Major'),
+('ENG203', 'Shakespeare', 3, 'Major'),
+('ENG204', 'Modern Poetry', 3, 'Major'),
+('PHIL201', 'Philosophy of Mind', 3, 'Supportive'),
+
+('ENG206', 'Contemporary World Literature', 3, 'Major'),
+('ENG207', 'Advanced Composition', 3, 'Major'),
+('ENG208', 'The Novel', 3, 'Major'),
+('ENG209', 'Drama', 3, 'Major'),
+('PHIL202', 'Ethics and Morality', 3, 'Supportive'),
+
+('ENG301', 'African American Literature', 3, 'Major'),
+('ENG302', 'Postcolonial Literature', 3, 'Major'),
+('ENG303', 'Women in Literature', 3, 'Major'),
+('ENG304', 'Literature and Film', 3, 'Major'),
+
+('ENG306', 'Medieval Literature', 3, 'Major'),
+('ENG307', 'Renaissance Literature', 3, 'Major'),
+('ENG309', '19th Century English Literature', 3, 'Major'),
+('ENG310', 'Gothic Literature', 3, 'Major'),
+('PHIL303', 'Philosophy of Science', 3, 'Supportive'),
+
+('ENG401', '20th Century English Literature', 3, 'Major'),
+('ENG402', 'Contemporary American Literature', 3, 'Major'),
+('LIT401', 'Literature of the American South', 3, 'Major'),
+('ENG404', 'Science Fiction and Fantasy Literature', 3, 'Major'),
+('ENG405', 'Children’s Literature', 3, 'Major'),
+
+('ENG406', 'Creative Nonfiction', 3, 'Major'),
+('ENG407', 'Advanced Creative Writing', 3, 'Major'),
+('LIT402', 'Literary Editing and Publishing', 3, 'Major'),
+('ENG409', 'Senior Seminar in English', 3, 'Major'),
+('ENG410', 'Independent Study in English', 3, 'Major');
+
+
