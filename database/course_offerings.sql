@@ -214,3 +214,154 @@ INSERT INTO course_offerings (course_id, department_id, course_type, semester) V
 ('ASTR406', 'PHY', 'Supportive', 7);
 
 
+# for the chemistry department
+INSERT INTO course_offerings (course_id, department_id, course_type, semester) VALUES
+('CHEM101', 'CHEM', 'Major', 0),
+('MATH101', 'CHEM', 'Supportive', 0),
+('PHYS101', 'CHEM', 'Supportive', 0),
+('ENG101', 'CHEM', 'Common', 0),
+('BIO101', 'CHEM', 'Supportive', 0),
+
+('CHEM102', 'CHEM', 'Major', 1),
+('MATH102', 'CHEM', 'Supportive', 1),
+('PHYS102', 'CHEM', 'Supportive', 1),
+('ENG102', 'CHEM', 'Common', 1),
+('CHEM103', 'CHEM', 'Major', 1),
+
+('CHEM201', 'CHEM', 'Major', 2),
+('CHEM202', 'CHEM', 'Major', 2),
+('CHEM203', 'CHEM', 'Major', 2),
+('STAT201', 'CHEM', 'Supportive', 2),
+('CHEM204', 'CHEM', 'Major', 2),
+
+('CHEM205', 'CHEM', 'Major', 3),
+('CHEM206', 'CHEM', 'Major', 3),
+('CHEM207', 'CHEM', 'Major', 3),
+('CHEM208', 'CHEM', 'Major', 3),
+('CHEM209', 'CHEM', 'Major', 3),
+
+('CHEM301', 'CHEM', 'Major', 4),
+('CHEM302', 'CHEM', 'Major', 4),
+('CHEM303', 'CHEM', 'Major', 4),
+('CHEM304', 'CHEM', 'Major', 4),
+('CHEM305', 'CHEM', 'Major', 4),
+
+('CHEM306', 'CHEM', 'Major', 5),
+('CHEM307', 'CHEM', 'Major', 5),
+('PHIL301', 'CHEM', 'Common', 5),
+('CHEM308', 'CHEM', 'Major', 5),
+('CHEM309', 'CHEM', 'Major', 5),
+
+('CHEM401', 'CHEM', 'Major', 6),
+('CHEM402', 'CHEM', 'Major', 6),
+('CHEM403', 'CHEM', 'Major', 6),
+('CHEM404', 'CHEM', 'Major', 6),
+('LIT101', 'CHEM', 'Common', 6),
+
+('CHEM405', 'CHEM', 'Major', 7),
+('HIS401', 'CHEM', 'Common', 7),
+('ENV401', 'CHEM', 'Supportive', 7),
+('BIO402', 'CHEM', 'Supportive', 7),
+('PHYS403', 'CHEM', 'Supportive', 7);
+
+
+# for the biology department
+INSERT INTO course_offerings (course_id, department_id, course_type, semester) VALUES
+('BIO101', 'BIO', 'Major', 0),
+('CHEM101', 'BIO', 'Supportive', 0),
+('MATH101', 'BIO', 'Supportive', 0),
+('ENG101', 'BIO', 'Common', 0),
+('STAT101', 'BIO', 'Supportive', 0),
+
+('BIO102', 'BIO', 'Major', 1),
+('CHEM102', 'BIO', 'Supportive', 1),
+('MATH102', 'BIO', 'Supportive', 1),
+('ENG102', 'BIO', 'Common', 1),
+('PHYS101', 'BIO', 'Supportive', 1),
+
+('BIO201', 'BIO', 'Major', 2),
+('BIO202', 'BIO', 'Major', 2),
+('CHEM201', 'BIO', 'Supportive', 2),
+('PHYS102', 'BIO', 'Supportive', 2),
+('BIO203', 'BIO', 'Major', 2),
+
+('BIO204', 'BIO', 'Major', 3),
+('BIO205', 'BIO', 'Major', 3),
+('CHEM202', 'BIO', 'Supportive', 3),
+('BIO206', 'BIO', 'Major', 3),
+('STAT202', 'BIO', 'Supportive', 3),
+
+('BIO301', 'BIO', 'Major', 4),
+('BIO302', 'BIO', 'Major', 4),
+('BIO303', 'BIO', 'Major', 4),
+('CHEM301', 'BIO', 'Supportive', 4),
+('BIO304', 'BIO', 'Major', 4),
+
+('BIO305', 'BIO', 'Major', 5),
+('BIO306', 'BIO', 'Major', 5),
+('BIO307', 'BIO', 'Major', 5),
+('CHEM302', 'BIO', 'Supportive', 5),
+('BIO308', 'BIO', 'Major', 5),
+
+('BIO401', 'BIO', 'Major', 6),
+('BIO402', 'BIO', 'Major', 6),
+('BIO403', 'BIO', 'Major', 6),
+('BIO404', 'BIO', 'Major', 6),
+('BIO405', 'BIO', 'Major', 6),
+
+('BIO406', 'BIO', 'Major', 7),
+('BIO407', 'BIO', 'Major', 7),
+('BIO408', 'BIO', 'Major', 7),
+('BIO409', 'BIO', 'Major', 7),
+('BIO410', 'BIO', 'Major', 7);
+
+
+# for the english department
+INSERT INTO course_offerings (course_id, department_id, course_type, semester) VALUES
+('ENG101', 'ENG', 'Major', 0),
+('ENG102', 'ENG', 'Major', 0),
+('ENG103', 'ENG', 'Major', 0),
+('PHIL101', 'ENG', 'Supportive', 0),
+('LIT101', 'ENG', 'Major', 0),
+
+('ENG106', 'ENG', 'Major', 1),
+('ENG107', 'ENG', 'Major', 1),
+('ENG108', 'ENG', 'Major', 1),
+('ENG109', 'ENG', 'Major', 1),
+('ENG110', 'ENG', 'Major', 1),
+
+('ENG201', 'ENG', 'Major', 2),
+('ENG202', 'ENG', 'Major', 2),
+('ENG203', 'ENG', 'Major', 2),
+('ENG204', 'ENG', 'Major', 2),
+('PHIL201', 'ENG', 'Supportive', 2),
+
+('ENG206', 'ENG', 'Major', 3),
+('ENG207', 'ENG', 'Major', 3),
+('ENG208', 'ENG', 'Major', 3),
+('ENG209', 'ENG', 'Major', 3),
+('PHIL202', 'ENG', 'Supportive', 3),
+
+('ENG301', 'ENG', 'Major', 4),
+('ENG302', 'ENG', 'Major', 4),
+('ENG303', 'ENG', 'Major', 4),
+('ENG304', 'ENG', 'Major', 4),
+('PHIL301', 'ENG', 'Supportive', 4),
+
+('ENG306', 'ENG', 'Major', 5),
+('ENG307', 'ENG', 'Major', 5),
+('ENG309', 'ENG', 'Major', 5),
+('ENG310', 'ENG', 'Major', 5),
+('PHIL303', 'ENG', 'Supportive', 5),
+
+('ENG401', 'ENG', 'Major', 6),
+('ENG402', 'ENG', 'Major', 6),
+('LIT401', 'ENG', 'Major', 6),
+('ENG404', 'ENG', 'Major', 6),
+('ENG405', 'ENG', 'Major', 6),
+
+('ENG406', 'ENG', 'Major', 7),
+('ENG407', 'ENG', 'Major', 7),
+('LIT402', 'ENG', 'Major', 7),
+('ENG409', 'ENG', 'Major', 7),
+('ENG410', 'ENG', 'Major', 7);

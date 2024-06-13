@@ -249,6 +249,7 @@ INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 # courses for English
 INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('ENG103', 'World Literature', 3),
+('PHIL101', 'Introduction to Philosophy', 3),
 
 ('ENG106', 'American Literature I', 3),
 ('ENG107', 'British Literature I', 3),
