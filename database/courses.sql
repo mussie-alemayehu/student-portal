@@ -176,19 +176,6 @@ INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('CRYPTO301', 'Introduction to Cryptography', 3);
 
 
-
-
-
-
-
-// I stoped here
-
-
-
-
-
-
-
 # courses for information systems
 INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('IS101', 'Introduction to Information Systems', 3),
@@ -227,7 +214,6 @@ INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 
 # biology courses
 INSERT INTO courses (course_code, course_name, credit_hours) VALUES
-
 ('BIO102', 'Cell Biology', 4),
 
 ('BIO201', 'Genetics', 4),
