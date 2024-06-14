@@ -39,3 +39,13 @@ CREATE TABLE course_offerings (
     FOREIGN KEY (course_id) REFERENCES courses(course_code),
     FOREIGN KEY (department_id) REFERENCES departments(department_code)
 );
+
+CREATE TABLE register_courses (
+    registration_id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id VARCHAR(255) NOT NULL,
+    offering_id INT NOT NULL,
+    registration_date DATE,
+    grade VARCHAR(2),
+    FOREIGN KEY (student_id) REFERENCES students(id),
+    FOREIGN KEY (offering_id) REFERENCES course_offerings(offering_id)
+);
