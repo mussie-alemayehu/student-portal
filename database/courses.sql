@@ -1,11 +1,4 @@
-
-CREATE TABLE courses (
-    course_code VARCHAR(255)  PRIMARY KEY,
-    course_name VARCHAR(255) NOT NULL,
-    credit_hours INT NOT NULL,
-);
-
-# courses for computer science
+-- courses for computer science
 INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('CS101', 'Introduction to Programming', 4),
 ('CS102', 'Computer Science Fundamentals', 4),
@@ -56,7 +49,7 @@ INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('LIT101', 'Introduction to Literature', 3);
 
 
-# courses for chemistry
+-- courses for chemistry
 INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('CHEM101', 'General Chemistry I', 4),
 ('BIO101', 'Introduction to Biology', 4),
@@ -98,7 +91,7 @@ INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('PHYS403', 'Advanced Physics for Chemists', 3);
 
 
-# courses for physics department
+-- courses for physics department
 INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 
 ('PHYS103', 'Modern Physics', 4),
@@ -137,7 +130,7 @@ INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('ASTR406', 'The Early Universe', 3);
 
 
-# courses for mathematics
+-- courses for mathematics
 INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('STAT101', 'Introduction to Statistics', 3),
 
@@ -176,7 +169,7 @@ INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('CRYPTO301', 'Introduction to Cryptography', 3);
 
 
-# courses for information systems
+-- courses for information systems
 INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('IS101', 'Introduction to Information Systems', 3),
 ('BUS101', 'Introduction to Business', 3),
@@ -212,7 +205,7 @@ INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('ENT301', 'Entrepreneurship in IT', 3);
 
 
-# biology courses
+-- biology courses
 INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('BIO102', 'Cell Biology', 4),
 
@@ -246,7 +239,7 @@ INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('BIO410', 'Toxicology', 3);
 
 
-# courses for English
+-- courses for English
 INSERT INTO courses (course_code, course_name, credit_hours) VALUES
 ('ENG103', 'World Literature', 3),
 ('PHIL101', 'Introduction to Philosophy', 3),

@@ -1,16 +1,4 @@
-
-CREATE TABLE course_offerings (
-    offering_id INT AUTO_INCREMENT PRIMARY KEY,
-    course_id  VARCHAR(255)  NOT NULL,
-    department_id  VARCHAR(10)  NOT NULL,
-    course_type VARCHAR(255),
-    semester INT,
-    FOREIGN KEY (course_id) REFERENCES courses(course_code),
-    FOREIGN KEY (department_id) REFERENCES departments(department_code)
-);
-
-
-# for the cs department
+-- for the cs department
 INSERT INTO course_offerings (course_id, department_id, course_type, semester) VALUES
 ('CS101', 'CS', 'Major', 0),
 ('CS102', 'CS', 'Major', 0),
@@ -61,7 +49,7 @@ INSERT INTO course_offerings (course_id, department_id, course_type, semester) V
 ('LIT101', 'CS', 'Common', 7);
 
 
-# for the is department
+-- for the is department
 INSERT INTO course_offerings (course_id, department_id, course_type, semester) VALUES
 ('IS101', 'IS', 'Major', 0),
 ('CS101', 'IS', 'Supportive', 0),
@@ -112,7 +100,7 @@ INSERT INTO course_offerings (course_id, department_id, course_type, semester) V
 ('ENT301', 'IS', 'Common', 7);
 
 
-# for the mathematics department
+-- for the mathematics department
 INSERT INTO course_offerings (course_id, department_id, course_type, semester) VALUES
 ('MATH101', 'MATH', 'Major', 0),
 ('MATH102', 'MATH', 'Major', 0),
@@ -163,7 +151,7 @@ INSERT INTO course_offerings (course_id, department_id, course_type, semester) V
 ('CRYPTO301', 'MATH', 'Supportive', 7);
 
 
-# for the physics department
+-- for the physics department
 INSERT INTO course_offerings (course_id, department_id, course_type, semester) VALUES
 ('PHYS101', 'PHY', 'Major', 0),
 ('MATH101', 'PHY', 'Supportive', 0),
@@ -214,7 +202,7 @@ INSERT INTO course_offerings (course_id, department_id, course_type, semester) V
 ('ASTR406', 'PHY', 'Supportive', 7);
 
 
-# for the chemistry department
+-- for the chemistry department
 INSERT INTO course_offerings (course_id, department_id, course_type, semester) VALUES
 ('CHEM101', 'CHEM', 'Major', 0),
 ('MATH101', 'CHEM', 'Supportive', 0),
@@ -265,7 +253,7 @@ INSERT INTO course_offerings (course_id, department_id, course_type, semester) V
 ('PHYS403', 'CHEM', 'Supportive', 7);
 
 
-# for the biology department
+-- for the biology department
 INSERT INTO course_offerings (course_id, department_id, course_type, semester) VALUES
 ('BIO101', 'BIO', 'Major', 0),
 ('CHEM101', 'BIO', 'Supportive', 0),
@@ -316,7 +304,7 @@ INSERT INTO course_offerings (course_id, department_id, course_type, semester) V
 ('BIO410', 'BIO', 'Major', 7);
 
 
-# for the english department
+-- for the english department
 INSERT INTO course_offerings (course_id, department_id, course_type, semester) VALUES
 ('ENG101', 'ENG', 'Major', 0),
 ('ENG102', 'ENG', 'Major', 0),
