@@ -1,7 +1,8 @@
 .side-nav {
+    margin: 10px 2%;
     height: 76vh;
     width: 15%;
-    padding: 4vh 20px;
+    padding: 4vh 1%;
     float: left;
     background-image: linear-gradient(to bottom, #B290E9, #915FE1, #915FE1, #915FE1);
     border-radius: 16px;

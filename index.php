@@ -113,7 +113,7 @@ $stmt->close();
 </head>
 
 <body>
-
+    <?php include("header.php"); ?>
     <?php include("side-nav.php"); ?>
     <!-- this is where the container where the main contents of the page will be placed -->
     <div id="main-contents">
@@ -125,4 +125,3 @@ $stmt->close();
 </body>
 
 </html>
-
