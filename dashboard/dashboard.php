@@ -41,9 +41,6 @@ $stmt->close();
 $conn->close();
 ?>
 
-<div class="profile">
-    <p><?php echo $user_id; ?></p>
-</div>
 <div class="welcome-banner">
     <p class="date-time"><?php echo date('F j, Y') ?></p>
     <p class="welcome-message">Welcome back, <?php echo $full_name; ?></p>

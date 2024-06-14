@@ -7,8 +7,8 @@ body {
 
 #main-contents {
     float: right;
-    width: 78%;
-    margin: auto;
+    width: 76%;
+    margin: 10px 1%;
 }
 
 /* styles for the header */
@@ -28,7 +28,12 @@ header img {
     height: 72px;
 }
 
-header p {
+header .content {
+    display: inline-block;
+    width: 40%;
+}
+
+header .content p {
     padding-left: 100px;
     display: inline-block;
     padding-right: 5%;
@@ -36,26 +41,43 @@ header p {
     font-size: 2rem;
 }
 
-header .separator {
-    width: 30%;
-    display: inline-block;
-}
-
 header .links {
     display: inline-block;
-    margin: auto;
+    width: 40%;
 }
 
 header .links a {
     text-decoration: none;
-    color: mintcream;
-    margin: 0 10px;
+    padding: 6px 10px;
+    margin: 4px 10px;
+    display: inline-block;
+    width: 80px;
+    color: rgb(152, 152, 152);
+    background-color: rgb(45, 45, 45);
+    border-radius: 8px;
+    text-align: center;
+
 }
 
 header .links a:hover {
-    color: rgb(152, 152, 152);
+    color: mintcream;
 }
 
 header .links a:active {
     color: rgb(199, 199, 199);
+}
+
+header .profile {
+    position: absolute;
+    top: 30px;
+    right: 5%;
+    display: inline-block;
+    width: 10%;
+}
+
+header .profile p {
+    padding: 10px 15px;
+    background-color: white;
+    text-align: center;
+    border-radius: 8px;
 }
