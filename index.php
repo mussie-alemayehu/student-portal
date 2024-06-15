@@ -45,6 +45,7 @@ $stmt->close();
     <link rel="stylesheet" href="dashboard/main-contents-styles.css">
     <link rel="stylesheet" href="courses/main-contents-styles.css">
     <link rel="stylesheet" href="results/tables-style.css">
+    <link rel="stylesheet" href="registration/registration-styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/13dd5a24f4.js" crossorigin="anonymous"></script>
     <style>
@@ -65,7 +66,8 @@ $stmt->close();
     <!-- this is where the container where the main contents of the page will be placed -->
     <div id="main-contents">
         <?php
-        include('dashboard/dashboard.php');
+        // include('dashboard/dashboard.php');
+        include('registration/registration.php');
         ?>
     </div>
 
