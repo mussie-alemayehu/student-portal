@@ -52,7 +52,7 @@ header .links a {
     margin: 4px 10px;
     display: inline-block;
     width: 80px;
-    color: rgb(152, 152, 152);
+    color: mintcream;
     background-color: rgb(45, 45, 45);
     border-radius: 8px;
     text-align: center;
@@ -60,7 +60,7 @@ header .links a {
 }
 
 header .links a:hover {
-    color: mintcream;
+    color: rgb(152, 152, 152);
 }
 
 header .links a:active {
