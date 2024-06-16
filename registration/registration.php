@@ -1,13 +1,13 @@
-<div>
-    <select name="year" class="selector">
+<div id="semester-selectors">
+    <select name="year" class="selector left">
         <option value="">Select your year...</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
     </select>
-
-    <select name="semester" class="selector">
+    <!-- <div class="divider"></div> -->
+    <select name="semester" class="selector right">
         <option value="">Select your semester</option>
     </select>
 </div>
@@ -50,6 +50,29 @@ $result = $stmt->get_result()->fetch_all();
 
 ?>
 
-<div class="courses">
-    
+<div class="registering-courses">
+    <table>
+        <thead>
+            <td>No. </td>
+            <td>Course code</td>
+            <td>Name</td>
+            <td>Credit hours</td>
+        </thead>
+        <?php
+        $counter = 1;
+
+        foreach ($result as $course) :
+        ?>
+            <tr>
+                <td><?php echo $counter; $counter++; ?></td>
+                <td><?php echo $course[0]; ?></td>
+                <td><?php echo $course[1]; ?></td>
+                <td><?php echo $course[2]; ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</div>
+
+<div class="btn-container">
+    <button action="index.php" class="btn">Register for courses</button>
 </div>
