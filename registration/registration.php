@@ -38,7 +38,7 @@ $semesters_completed = $result["semesters_completed"];
 $stmt->close();
 
 // fetch the courses for the particular semester the student is registering for
-$sql = "SELECT course_code, course_name, credit_hours FROM 
+$sql = "SELECT course_code, course_name, credit_hours, offering_id FROM 
         courses INNER JOIN course_offerings ON course_id = course_code
         AND semester = ? AND department_id = ?";
 $stmt = $conn->prepare($sql);
@@ -46,7 +46,7 @@ $stmt->bind_param("is", $semesters_completed, $department_id);
 $stmt->execute();
 
 // here is the result of the semester courses the student is registering for
-$result = $stmt->get_result()->fetch_all();
+$courses = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 
 ?>
 
@@ -61,13 +61,13 @@ $result = $stmt->get_result()->fetch_all();
         <?php
         $counter = 1;
 
-        foreach ($result as $course) :
+        foreach ($courses as $course) :
         ?>
             <tr>
                 <td><?php echo $counter; $counter++; ?></td>
-                <td><?php echo $course[0]; ?></td>
-                <td><?php echo $course[1]; ?></td>
-                <td><?php echo $course[2]; ?></td>
+                <td><?php echo $course['course_code']; ?></td>
+                <td><?php echo $course['course_name']; ?></td>
+                <td><?php echo $course['credit_hours']; ?></td>
             </tr>
         <?php endforeach; ?>
     </table>
