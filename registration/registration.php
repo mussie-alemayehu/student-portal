@@ -1,17 +1,26 @@
 <div id="semester-selectors">
-    <select name="year" class="selector left">
+    <select id="yearSelector" name="year" class="selector left">
         <option value="">Select your year...</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
     </select>
-    <!-- <div class="divider"></div> -->
-    <select name="semester" class="selector right">
+    <select id="semesterSelector" name="semester" class="selector right" disabled>
         <option value="">Select your semester</option>
+        <option value="one">One</option>
+        <option value="two">Two</option>
     </select>
 </div>
+<?php
 
+if (file_exists('registration-form.js')) {
+    echo 'together';
+} else {
+    $js = "registration/registration-form.js";
+}
+?>
+<script src="<?php echo $js; ?>"></script>
 <?php
 
 if (session_status() == PHP_SESSION_NONE) {
@@ -74,5 +83,6 @@ $courses = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 </div>
 
 <div class="btn-container">
-    <button action="index.php" class="btn">Register for courses</button>
+    <?php include "register-student.php"; ?>
+    <button action="<?php register_student($conn, $courses); ?>" id="register-courses-button" class="btn">Register for courses</button>
 </div>
