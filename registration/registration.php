@@ -13,35 +13,61 @@
     </select>
 </div>
 
-<?php
-// include the registration form javascript file by first checking its location
-if (file_exists('registration-form.js')) {
-    $js = "registration-form.php";
-} else {
-    $js = "registration/registration-form.js";
-}
-?>
-<script src="<?php echo $js; ?>"></script>
-
 <!-- this container will be used to display the appropriate information based
  on the values of the selected year and semester -->
 <div id="registering-courses">
     <p>Please choose a year and semester to view courses.</p>
 </div>
 
-<div class="btn-container">
-    <?php
-    // include the function to register students to courses based on the
-    // location of the "register-student.php" file
-    if (file_exists("register-student.php")) {
-        include "register-student.php";
-    } else {
-        include "registration/register-student.php";
-    }
-    ?>
-    <button action="<?php register_student($conn, $courses); ?>" id="register-courses-button" class="btn">
-        Register for courses
-    </button>
+<button action="" id="fetch-courses-button" class="btn">Fetch courses</button>
 
-    <button action="" id="fetch-courses-button" class="btn">Fetch courses</button>
-</div>
+<script>
+    $(document).ready(function() {
+        var yearSelector = document.getElementById("yearSelector");
+        var semesterSelector = document.getElementById("semesterSelector");
+        var fetchCoursesButton = document.getElementById("fetch-courses-button");
+
+        function loadDefaultContent() {
+            var tableContainer = document.getElementById("registering-courses");
+            tableContainer.innerHTML = "Please choose a year and semester to view courses.";
+
+            fetchCoursesButton.style.display = "none";
+            alert("default content loaded");
+        }
+
+        yearSelector.addEventListener('change', function() {
+            if (this.value) {
+                semesterSelector.disabled = false;
+                loadDefaultContent();
+                if (semesterSelector.value) {
+                    fetchCoursesButton.style.display = "block";
+                }
+            } else {
+                semesterSelector.disabled = true;
+                semesterSelector.value = "";
+
+                loadDefaultContent();
+            }
+        });
+
+        semesterSelector.addEventListener('change', function() {
+            if (this.value != "") {
+                loadDefaultContent();
+                fetchCoursesButton.style.display = "block";
+            } else {
+                loadDefaultContent();
+            }
+        });
+
+        alert("listeners added successfully");
+
+        fetchCoursesButton.addEventListener('click', function() {
+            var year = yearSelector.value;
+            var semester = semesterSelector.value;
+
+            $("#registering-courses").load("registration/table.php?year=" + year + "&semester=" + semester);
+
+            this.style.display = "none";
+        });
+    });
+</script>
