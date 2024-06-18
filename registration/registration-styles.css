@@ -27,12 +27,13 @@
     width: 19%;
 }
 
-.registering-courses {
+#registering-courses {
     width: 90%;
     margin: 20px 4% 0;
+    text-align: center;
 }
 
-.registering-courses table {
+#registering-courses table {
     width: 100%;
     border-collapse: collapse;
     background-color: white;
@@ -40,17 +41,17 @@
     padding: 10px;
 }
 
-.registering-courses table thead {
+#registering-courses table thead {
     font-weight: bold;
     background-color: #F9F9F9;
     color: #915FE1;
 }
 
-.registering-courses table tr {
+#registering-courses table tr {
     border: solid 1px rgb(199, 199, 199);
 }
 
-.registering-courses td {
+#registering-courses td {
     padding: 10px 2%;
 }
 
@@ -66,12 +67,20 @@
     color: white;
     border: none;
     border-radius: 5px;
-  }
+}
   
-  .btn:hover {
+.btn:hover {
     background-color: rgb(126, 74, 210);
-  }
+}
 
-  .btn:active {
+.btn:active {
     color: rgb(184, 184, 184);
-  }
+}
+
+#fetch-courses-button {
+    display: none;
+}
+
+#register-courses-button {
+    display: none;
+}
