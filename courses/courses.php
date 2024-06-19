@@ -1,4 +1,3 @@
-
 <?php
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -28,22 +27,51 @@ $result = $stmt->get_result();
 <div class="current-courses">
     <p class="section-header">You are currently taking the following courses:</p>
 
-    <?php foreach($result as $course): ?>
-        <div class="course-item">
-            <div>
-                <p class="course-name"><?php echo $course["course_name"]; ?></p>
-                <p class="subtitles">Credit Hour: <?php echo $course["credit_hours"]; ?></p>
-                <p class="subtitles">Course Code: <?php echo $course["course_id"]; ?></p>
+    <?php if ($result->num_rows > 0) : ?>
+        <?php foreach ($result as $course) : ?>
+            <div class="course-item">
+                <div>
+                    <p class="course-name"><?php echo $course["course_name"]; ?></p>
+                    <p class="subtitles">Credit Hour: <?php echo $course["credit_hours"]; ?></p>
+                    <p class="subtitles">Course Code: <?php echo $course["course_id"]; ?></p>
+                </div>
+                <img src="education-hat.png" alt="course-icon">
             </div>
-            <img src="education-hat.png" alt="course-icon">
-        </div>
-    <?php endforeach; ?>
+        <?php endforeach; ?>
+    <?php else : ?>
+        <p>You are not registered to courses at the moment.</p>
+    <?php endif; ?>
 </div>
 <div class="previous-courses">
     <p class="section-header">Previous courses</p>
     <div class="previous-course-item">
-        <p class="course-name">
-            <span>OOP </span><span class="grade">A+</span>
-        </p>
+        <?php // if (): 
+        $sql = "SELECT semesters_completed FROM student_info WHERE student_id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $student_id);
+        $stmt->execute();
+
+        $semesters_completed = $stmt->get_result()->fetch_assoc()["semesters_completed"];
+        $stmt->close();
+
+        $sql = "SELECT course_id, grade FROM course_offerings INNER JOIN register_courses
+                ON course_offerings.offering_id = register_courses.offering_id
+                WHERE student_id = ? AND semester < ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("si", $student_id, $semesters_completed);
+        $stmt->execute();
+        $previous_courses = $stmt->get_result();
+
+        if ($previous_courses->num_rows > 0) :
+        ?>
+            <?php foreach ($previous_courses as $course) : ?>
+                <p class="course-name">
+                    <?php echo $course["course_id"]; ?>
+                    <span class="grade"><?php echo $course["grade"]; ?></span>
+                </p>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <p>Once you have completed courses, they will appear here.</p>
+        <?php endif; ?>
     </div>
 </div>

@@ -66,8 +66,7 @@ $stmt->close();
     <!-- this is where the container where the main contents of the page will be placed -->
     <div id="main-contents">
         <?php
-        // include('dashboard/dashboard.php');
-        include('courses/courses.php');
+        include('dashboard/dashboard.php');
         ?>
     </div>
 
