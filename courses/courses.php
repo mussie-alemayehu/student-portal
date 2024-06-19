@@ -45,15 +45,17 @@ $result = $stmt->get_result();
 <div class="previous-courses">
     <p class="section-header">Previous courses</p>
     <div class="previous-course-item">
-        <?php // if (): 
+        <?php
+        // obtain how many semesters the student has currently completed to fetch completed courses later
         $sql = "SELECT semesters_completed FROM student_info WHERE student_id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $student_id);
         $stmt->execute();
-
         $semesters_completed = $stmt->get_result()->fetch_assoc()["semesters_completed"];
         $stmt->close();
-
+        
+        // fetch the completed courses and display them
+        // we will display a message if there are no courses that are completed currently
         $sql = "SELECT course_id, grade FROM course_offerings INNER JOIN register_courses
                 ON course_offerings.offering_id = register_courses.offering_id
                 WHERE student_id = ? AND semester < ?";

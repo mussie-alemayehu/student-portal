@@ -40,7 +40,7 @@
     position: relative;
 }
 
-.course-name {
+.course-name .grade{
     color: #915FE1;
     font-family: sans-serif;
     font-weight: bold; 
@@ -67,5 +67,5 @@
 .course-name span {
     display: inline-block;
     width: 40%;
-    margin: 5%;
+    margin: 4%;
 }
