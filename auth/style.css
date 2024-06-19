@@ -101,6 +101,7 @@ a.forgot-password:active {
 }
 
 .welcome {
+  position: relative;
   width: 60%;
   height: 50vh;
   padding: 20vh 10% 10vh 20%;
@@ -130,4 +131,19 @@ a.forgot-password:active {
   color: red;
   font-size: 12px;
   margin-top: 5px;
+}
+
+.welcome form {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.welcome form button {
+  padding: 10px;
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
 }
