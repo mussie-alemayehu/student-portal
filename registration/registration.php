@@ -32,7 +32,6 @@
             tableContainer.innerHTML = "Please choose a year and semester to view courses.";
 
             fetchCoursesButton.style.display = "none";
-            alert("default content loaded");
         }
 
         yearSelector.addEventListener('change', function() {
@@ -58,8 +57,6 @@
                 loadDefaultContent();
             }
         });
-
-        alert("listeners added successfully");
 
         fetchCoursesButton.addEventListener('click', function() {
             var year = yearSelector.value;

@@ -16,6 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $semester_count = 1;
     }
 
+    // we need to find the completed semesters so we can use them to fetch
+    // courses associated with that specific semester
     $semesters_completed = ($year - 1) * 2 + $semester_count;
 }
 
@@ -80,6 +82,18 @@ if (file_exists("register-student.php")) {
     include "registration/register-student.php";
 }
 ?>
-<button action="<?php register_student($conn, $courses); ?>" id="register-courses-button" class="btn">
-    Register for courses
-</button>
+
+<form action="registration/register-student.php" method="POST">
+    <?php 
+    $count = 1;
+    foreach ($courses as $course): 
+    ?>
+    
+    <!-- create hidden input fields to submit values-->
+    <input type="hidden" name="<?php echo $count; ?>" value="<?php echo $course["offering_id"]; ?>">
+    
+    <?php $count++; endforeach; ?>
+    <button type="submit" id="register-courses-button" class="btn">
+        Register for courses
+    </button>
+</form>
