@@ -29,7 +29,7 @@
 
         function loadDefaultContent() {
             var tableContainer = document.getElementById("registering-courses");
-            tableContainer.innerHTML = "Please choose a year and semester to view courses.";
+            tableContainer.innerHTML = "<p>Please choose a year and semester to view courses.</p>";
 
             fetchCoursesButton.style.display = "none";
         }

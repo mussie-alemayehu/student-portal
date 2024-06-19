@@ -43,7 +43,7 @@ $sql = "SELECT course_code, course_name, credit_hours, offering_id FROM
         courses INNER JOIN course_offerings ON course_id = course_code
         AND semester = ? AND department_id = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("is", $semesters_completed, $department_id);
+$stmt->bind_param("is", $selected_semesters_completed, $department_id);
 $stmt->execute();
 
 // here is the result of the semester courses the student is registering for
@@ -66,6 +66,7 @@ if ($result->num_rows > 0) :
             <td>Course code</td>
             <td>Name</td>
             <td>Credit hours</td>
+            <td>Placeholder</td>
         </thead>
         <?php
         $counter = 1;
