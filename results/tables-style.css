@@ -23,3 +23,13 @@
 tr.footer {
     background-color: #F9F9F9;
 }
+
+p.no-completed-courses {
+    width: 40%;
+    padding: 5%;
+    color: black;
+    border-radius: 8px;
+    background-color: #bda4e6;
+    margin: 40px auto 0;
+    text-align: center;
+}
