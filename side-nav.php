@@ -29,13 +29,6 @@
     </div>
 
     <div class="nav-item">
-        <a href="#" id="chat-link">
-            <i class="nav-icon fa-solid fa-message"></i>
-            Chat
-        </a>
-    </div>
-
-    <div class="nav-item">
         <a href="#" id="logout-link">
             <i class="nav-icon fa-solid fa-right-from-bracket"></i>
             Logout

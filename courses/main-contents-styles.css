@@ -36,10 +36,8 @@
 
 .course-item > div {
     display: inline-block;
-    width: 60%;
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    width: 72%;
+    position: relative;
 }
 
 .course-name {
@@ -49,15 +47,14 @@
     font-size: 1.3rem;
 }
 
-.credit {
+.subtitles {
     color: #5f5668; 
 }
 
 .course-item > img {
-    width: 100px;
+    width: 20%;
     position: relative;
-    left: 65%;
-
+    left: 5%;
 }
 
 .previous-course-item {
