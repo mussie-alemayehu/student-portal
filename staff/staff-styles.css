@@ -1,0 +1,31 @@
+body {
+    background-image: linear-gradient(to bottom right, #B290E9, #915FE1, #915FE1);
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.selectors {
+    text-align: center;
+    width: 30%;
+    padding: 25vh 5px 0;
+    float: left;
+}
+
+.selectors select {
+    margin: 5vh 0 0;
+    width: 85%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: lightgrey;
+}
+
+.selectors input {
+    margin: 5vh 0 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
