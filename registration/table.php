@@ -66,7 +66,6 @@ if ($result->num_rows > 0) :
             <td>Course code</td>
             <td>Name</td>
             <td>Credit hours</td>
-            <td>Placeholder</td>
         </thead>
         <?php
         $counter = 1;

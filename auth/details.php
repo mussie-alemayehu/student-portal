@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $semesters_completed = 0;
 
     // prepare and execute the data insertion query
-    $query = "INSERT INTO student_info (student_id, full_name, email, department, college, batch, year, semesters_completed) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $query = "INSERT INTO student_info (student_id, full_name, email, department_id, college, batch, year, semesters_completed) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("sssssiis", $stud_id, $fullname, $email, $department, $college, $batch, $year, $semesters_completed);
 

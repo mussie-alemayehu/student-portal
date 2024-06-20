@@ -9,9 +9,10 @@ body {
 
 .selectors {
     text-align: center;
-    width: 30%;
+    width: 20%;
     padding: 25vh 5px 0;
     float: left;
+    position: fixed;
 }
 
 .selectors select {
@@ -28,4 +29,14 @@ body {
     padding: 10px;
     border-radius: 10px;
     border: none;
+}
+
+.students {
+    margin: 30px 2% 30px 22%;
+    padding: 10px;
+    width: 25%;
+}
+
+.students .message {
+    margin-top: 35vh;
 }
