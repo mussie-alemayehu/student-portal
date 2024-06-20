@@ -63,8 +63,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["submit"])) {
 
             foreach ($result as $student) :
             ?>
-                <p>Name: <?php echo $student["full_name"]; ?></p>
-                <p>ID: <?php echo $student["student_id"]; ?></p>
+                <div class="student">
+                    <p class="name"><?php echo $student["full_name"]; ?></p>
+                    <p class="id"><?php echo $student["student_id"]; ?></p>
+                    <p class="goto">></p>
+                </div>
             <?php endforeach; ?>
         <?php else : ?>
             <p class="message">Select which class students you want to view.</p>

@@ -40,3 +40,37 @@ body {
 .students .message {
     margin-top: 35vh;
 }
+
+.student {
+    background-color: #B290E9;
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin: 0 6px 12px;
+    position: relative;
+}
+
+.student:hover {
+    background-color: #c0a7e8;
+}
+
+.student:active {
+    background-color: #B290E9;
+}
+
+.student .name {
+    color: #504e50;
+    font-size: 1.4rem;
+    margin: 3px;
+}
+
+.student .id {
+    font-size: 0.7rem;
+    margin: 3px;
+}
+
+.student .goto {
+    position: absolute;
+    color: #6d6b6d;
+    top: 5px;
+    right: 15px;
+}
