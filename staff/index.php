@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["submit"])) {
                     <?php foreach ($courses as $course) : ?>
                         <div class="enter-grades">
                             <p>Enter grade for <?php echo $course["course_name"]; ?></p>
-                            <select name="<?php echo $course["course_id"] ?>" required>
+                            <select name="<?php echo $course["course_id"]; ?>" required>
                                 <option value="">Select grade....</option>
                                 <?php foreach ($grades as $grade) : ?>
                                     <option value="<?php echo $grade; ?>"><?php echo $grade; ?></option>
@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["submit"])) {
                             </select>
                         </div>
                     <?php endforeach; ?>
-                    <button >Submit</button>
+                    <button>Submit</button>
                 </form>
             <?php endif; ?>
         </div>
