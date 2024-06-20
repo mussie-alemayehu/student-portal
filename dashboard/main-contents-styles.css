@@ -1,75 +1,71 @@
 
 .welcome-banner {
-    height: 120px;
-    border-radius: 20px;
-    background-image: linear-gradient(to left, #B290E9, #915FE1, #915FE1);
-    padding: 15px;
-    position: relative;
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
 }
 
-p.welcome-message {
-    font-size: 2rem;
-    font-family: sans-serif;
-    color: white;
-    font-weight: 600;
-    position: absolute;
-    bottom: 0;
-    left: 30px;
+.welcome-banner .date-time {
+    font-size: 14px;
+    color: #b0b0b0; /* Grey text */
+    margin: 0;
 }
 
-p.date-time {
-    font-family: sans-serif;
-    color: rgb(227, 223, 223);
-    padding-left: 15px;
+.welcome-banner .welcome-message {
+    margin: 10px 0 0;
+    font-size: 24px;
+    color: #e0e0e0;
 }
 
 .welcome-banner img {
-    height: 120px;
-    position: absolute;
-    right: 50px;
-    top: 15px;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
 }
 
 .profile-info {
-    position: relative;
-    padding: 30px 3% 30px 17%;
-    width: 30%;
-    background-color: white;
-    margin-top: 30px;
-    box-shadow: 0 0 20px -10px black;
-    border-radius: 8px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
 }
 
 .profile-info img {
-    width: 15%;
-    position: absolute;
-    left: 10%;
-    top: 50px;
+    background-color: #333333;
     border-radius: 50%;
-    padding: 10px;
-    background-color: #E2D2F9;
-}
-
-.profile-info > p > .info {
-    color: #915FE1;
-    font-weight: bold;
-}
-
-.profile-info > .header {
-    padding-left: 10%;
+    width: 100px;
+    height: 100px;
     margin-bottom: 20px;
 }
 
-.profile-info > .header > .title {
-    font-weight: bold;
-    font-size: 1.3rem;
-    color: #915FE1;
-    margin: 10px 0 0;
+.profile-info .header .title {
+    font-size: 18px;
+    margin: 0 0 5px;
+    color: #e0e0e0;
 }
 
-.profile-info > .header > .subtitle {
-    margin: 0;
-    font-size: 0.8rem;
-    color:rgb(146, 146, 146);
+.profile-info .header .subtitle {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.profile-info p .title {
+    font-weight: bold;
+    color: #a0a0a0;
+}
+
+.profile-info p .info {
+    color: #e0e0e0;
 }

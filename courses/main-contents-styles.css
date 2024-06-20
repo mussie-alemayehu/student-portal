@@ -1,3 +1,4 @@
+/* 
 
 .current-courses {
     float: left;
@@ -68,4 +69,46 @@
     display: inline-block;
     width: 40%;
     margin: 4%;
+} */
+
+.current-courses, .previous-courses {
+    padding: 20px;
+    margin: 20px;
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+.section-header {
+    color: #1abc9c;
+    margin-bottom: 15px;
+}
+
+.course-item, .previous-course-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #3d5467;
+    border-radius: 5px;
+}
+
+.course-name {
+    font-size: 18px;
+    color: #ecf0f1;
+}
+
+.subtitles, .grade {
+    font-size: 14px;
+    color: #bdc3c7;
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
+
+.grade {
+    font-weight: bold;
+    color: #2ecc71;
 }

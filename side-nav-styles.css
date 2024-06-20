@@ -1,40 +1,43 @@
+
 .side-nav {
-    margin: 10px 2%;
-    height: 76vh;
-    width: 15%;
-    padding: 4vh 1%;
+    background-color: #34495e;
+    color: #ecf0f1;
+    position: fixed;
+    width: 200px; 
+    height: 100vh;
+    padding: 20px;
     float: left;
-    background-image: linear-gradient(to bottom, #B290E9, #915FE1, #915FE1, #915FE1);
-    border-radius: 16px;
-    text-align: left;
+    height: 100vh;
+    left: 0;
+    top: 0;
 }
 
 .side-nav img {
+    max-width: 50%;
     display: block;
-    width: 40%;
-    background-color: #915FE1;
-    padding: 10px;
-    margin: 0 auto 4vh;
-    border-radius: 12px;
-    clear: both;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.nav-item {
+    margin-bottom: 10px;
 }
 
 .nav-item a {
+    color: #ecf0f1;
     text-decoration: none;
-    color: rgb(227, 223, 223);
-    padding: 1vh;
-    display: block;
-    border-radius: 8px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
 }
 
-.nav-item a:active {
-    color: white;
+.nav-item a:hover, .nav-item a.selected {
+    background-color: #2c3e50;
+    color: #ffffff;
 }
 
-.nav-item a:hover {
-    background-color:#B290E9;
-}
-
-.selected {
-    background-color: #B290E9;
+.nav-icon {
+    margin-right: 10px; 
 }

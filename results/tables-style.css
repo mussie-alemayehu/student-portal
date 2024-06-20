@@ -1,35 +1,64 @@
 
-.results table tr {
-    border: solid 1px rgb(199, 199, 199);
-}
-
-.results table td {
-    padding: 10px 2%;
-}
-
-.results table thead {
-    font-weight: bold;
-    background-color: #F9F9F9;
-    color: #915FE1;
+.results {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
 }
 
 .results table {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 0 10px -3px black;
+    margin-bottom: 20px;
 }
 
-tr.footer {
-    background-color: #F9F9F9;
+.results table th, .results table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #2e2e2e;
 }
 
-p.no-completed-courses {
+.results table th {
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+}
+
+.results table td {
+    background-color: #34495e;
+}
+
+.results table tr:hover td {
+    background-color: #3c4a56;
+}
+
+.results .footer {
+    background-color: #2e2e2e;
+    font-weight: bold;
+}
+
+.results .footer td {
+    border-bottom: none;
+}
+
+.no-completed-courses {
+    background-color: #34495e;
     width: 40%;
-    padding: 5%;
-    color: black;
-    border-radius: 8px;
-    background-color: #bda4e6;
-    margin: 40px auto 0;
+    margin: auto;
     text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.results table th.code, .results table td.code {
+    width: 15%;
+}
+
+.results table th.title, .results table td.title {
+    width: 40%;
+}
+
+.results table th.credit, .results table td.credit,
+.results table th.grade, .results table td.grade,
+.results table th.point, .results table td.point {
+    width: 15%;
 }

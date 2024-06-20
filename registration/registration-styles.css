@@ -1,88 +1,71 @@
 
 #semester-selectors {
-    width: 90%;
-    margin: 10px 4%;  
-    position: relative; 
+    padding: 20px;
+    margin: 20px;
+    background-color: #34495e;
+    border-radius: 5px;
 }
 
 .selector {
-    width: 40%;
-    margin: 40px auto 40px 0;
-    padding: 10px 2%;
-    border-radius: 12px;
-    border: none;
-}
-
-.left {
-    margin-left: 5%;
-}
-
-.right {
-    position: absolute;
-    right: 5%;
-}
-
-.divider {
-    display: inline-block;
-    width: 19%;
-}
-
-#registering-courses {
-    width: 90%;
-    margin: 20px 4% 0;
-    text-align: center;
-}
-
-#registering-courses table {
-    width: 100%;
-    text-align: left;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 0 10px -3px black;
+    width: 45%;
+    background-color: #34495e;
+    color: #ecf0f1;
+    border: 1px solid #226659;
     padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
 }
 
-#registering-courses table thead {
-    font-weight: bold;
-    background-color: #F9F9F9;
-    color: #915FE1;
-}
-
-#registering-courses table tr {
-    border: solid 1px rgb(199, 199, 199);
-}
-
-#registering-courses td {
-    padding: 10px 2%;
+.selector:disabled {
+    color: grey;
 }
 
 .btn {
-    width: 20%;
-    margin: 50px auto 0;
-    height: 30px;
-    background-color: #915fe1;
-    color: white;
+    background-color: #1abc9c;
+    color: #ffffff;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-}
-  
-.btn:hover {
-    background-color: rgb(126, 74, 210);
+    cursor: pointer;
+    margin: auto;
+    margin-top: 40px;
+    display: block;
 }
 
-.btn:active {
-    color: rgb(184, 184, 184);
+.btn:hover {
+    background-color: #16a085;
+}
+
+#registering-courses > p {
+    background-color: #34495e;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+td, th {
+    border: 1px solid grey;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #1abc9c;
+}
+
+tr:nth-child(even) {
+    background-color: #3d5467;
 }
 
 #fetch-courses-button {
     display: none;
-}
-
-#registering-courses > p {
-    width: 40%;
-    padding: 5%;
-    color: black;
-    border-radius: 8px;
-    background-color: #bda4e6;
-    margin: auto;
 }
