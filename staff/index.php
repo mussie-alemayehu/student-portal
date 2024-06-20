@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["submit"])) {
                     <div class="student">
                         <p class="name"><?php echo $student["full_name"]; ?></p>
                         <p class="id"><?php echo $student["student_id"]; ?></p>
-                        <p class="goto">></p>
+                        <p class="goto"></p>
                     </div>
                 <?php endforeach; ?>
             <?php else : ?>
