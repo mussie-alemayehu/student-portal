@@ -88,10 +88,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["submit"])) {
                 ON register_courses.offering_id = course_offerings.offering_id
                 INNER JOIN courses ON course_id = course_code
                 WHERE grade = 'NA' AND student_id = ?;";
-        $selected_student = $_GET["stud_id"];
+        $selected_student_id = $_GET["stud_id"];
 
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("s", $selected_student);
+        $stmt->bind_param("s", $selected_student_id);
         $stmt->execute();
         $courses = $stmt->get_result();
 
@@ -101,11 +101,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["submit"])) {
             <?php if ($courses->num_rows == 0) : ?>
                 <p>The selected student has no active courses at the moment.</p>
             <?php else : ?>
-                <form action="" method="post">
+                <form action="enter-grades.php" method="post">
+                    <input class="hidden" type="text" name="student_id" value="<?php echo $selected_student_id ?>">
                     <?php foreach ($courses as $course) : ?>
                         <div class="enter-grades">
                             <p>Enter grade for <?php echo $course["course_name"]; ?></p>
-                            <select name="<?php echo $course["course_id"]; ?>" required>
+                            <select name="<?php echo $course["offering_id"]; ?>" required>
                                 <option value="">Select grade....</option>
                                 <?php foreach ($grades as $grade) : ?>
                                     <option value="<?php echo $grade; ?>"><?php echo $grade; ?></option>
