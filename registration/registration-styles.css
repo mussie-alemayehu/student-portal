@@ -36,7 +36,7 @@
     background-color: #16a085;
 }
 
-#registering-courses > p {
+#registering-courses > p, .congra-message {
     background-color: #34495e;
     width: 40%;
     margin: auto;

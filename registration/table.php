@@ -4,6 +4,12 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
+if (file_exists("connection.php")) {
+    require_once("connection.php");
+} else {
+    require_once("../connection.php");
+}
+
 $stud_id = $_SESSION["user_id"];
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -19,12 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // we need to find the completed semesters so we can use them to fetch
     // courses associated with that specific semester
     $selected_semesters_completed = ($year - 1) * 2 + $semester_count;
-}
-
-if (file_exists("connection.php")) {
-    require_once("connection.php");
-} else {
-    require_once("../connection.php");
 }
 
 // fetch student information to use for fetching data
