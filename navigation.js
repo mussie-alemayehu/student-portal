@@ -7,18 +7,22 @@ $(document).ready(function () {
         new Map([
             ['link_id', '#dashboard-link'],
             ['content', 'dashboard/dashboard.php'],
+            ['title', 'Dashboard'],
         ]),
         new Map([
             ['link_id', '#courses-link'],
             ['content', 'courses/courses.php'],
+            ['title', 'Courses'],
         ]),
         new Map([
             ['link_id', '#results-link'],
             ['content', 'results/results.php'],
+            ['title', 'Results'],
         ]),
         new Map([
             ['link_id', '#registration-link'],
             ['content', 'registration/registration.php'],
+            ['title', 'Registration'],
         ]),
     ];
 
@@ -29,17 +33,8 @@ $(document).ready(function () {
             $('.selected').removeClass('selected');
             $(this).addClass('selected');
             $('#main-contents').load(item.get('content'));
-        });
-    }
-
-    // register a click event for the logout link
-    for (let item of navigation) {
-        $(item.get('link_id')).click(function (event) {
-            event.preventDefault();
-            $('.selected').removeClass('selected');
-            $(this).addClass('selected');
-
-            $('#main-contents').load(item.get('content'));
+            
+            document.title = item.get('title');
         });
     }
 
@@ -49,8 +44,16 @@ $(document).ready(function () {
         $confirm = confirm("Are you sure you want to logout?");
         if ($confirm) {
             window.location.href = 'auth/logout.php';
-            window.location.href = 'auth/index.php';
             exit();
         }
     });
+
+    var links = ['dashboard-link', 'courses-link', 'results-link', 'registration-link'];
+
+    for (let link of links) {
+        $('#top-' + link).click(function (event) {
+            event.preventDefault();
+            $('#' + link).click();
+        });
+    }
 });

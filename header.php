@@ -6,10 +6,10 @@
         <p>Portal</p>
     </div>
     <div class="links">
-        <a href="#">Dashboard</a>
-        <a href="#">Registration</a>
-        <a href="#">Courses</a>
-        <a href="#">Results</a>
+        <a id="top-dashboard-link" href="#">Dashboard</a>
+        <a id="top-registration-link" href="#">Registration</a>
+        <a id="top-courses-link" href="#">Courses</a>
+        <a id="top-results-link" href="#">Results</a>
     </div>
     <div class="profile">
         <p><?php echo $user_id; ?></p>
