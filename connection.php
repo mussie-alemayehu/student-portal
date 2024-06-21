@@ -1,5 +1,5 @@
 <?php
-$hostname="localhost:3306";
+$hostname="10.4.192.160";
 $userName="root";
 $dbpassword="";
 $dbName="student_portal";

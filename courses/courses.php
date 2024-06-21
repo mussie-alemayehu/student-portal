@@ -52,25 +52,27 @@ $result = $stmt->get_result();
     $stmt->execute();
     $semesters_completed = $stmt->get_result()->fetch_assoc()["semesters_completed"];
     $stmt->close();
-    
+
     // fetch the completed courses and display them
     // we will display a message if there are no courses that are completed currently
-    $sql = "SELECT course_id, grade FROM course_offerings INNER JOIN register_courses
-            ON course_offerings.offering_id = register_courses.offering_id
-            WHERE student_id = ? AND semester < ?";
+    $sql = "SELECT course_name, course_id, grade
+            FROM register_courses INNER JOIN course_offerings 
+            ON register_courses.offering_id = course_offerings.offering_id 
+            INNER JOIN courses ON course_id = course_code
+            WHERE student_id = ? AND semester < ?;";
+
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("si", $student_id, $semesters_completed);
     $stmt->execute();
     $previous_courses = $stmt->get_result();
-    
+
     if ($previous_courses->num_rows > 0) :
     ?>
         <?php foreach ($previous_courses as $course) : ?>
             <div class="previous-course-item">
-                <p class="course-name">
-                    <?php echo $course["course_id"]; ?>
-                    <span class="grade"><?php echo $course["grade"]; ?></span>
-                </p>
+                <span class="course-id"><?php echo $course["course_id"]; ?></span>
+                <span class="course-name"><?php echo $course["course_name"]; ?></span>
+                <span class="grade"><?php echo $course["grade"]; ?></span>
             </div>
         <?php endforeach; ?>
     <?php else : ?>
