@@ -11,14 +11,14 @@
     margin-bottom: 20px;
 }
 
-.results table th, .results table td {
+.results table thead, .results table td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #2e2e2e;
 }
 
-.results table th {
-    background-color: #1c1c1c;
+.results table thead td {
+    background-color: #2c2c2c;
     color: #e0e0e0;
 }
 
@@ -49,16 +49,16 @@
     border-radius: 5px;
 }
 
-.results table th.code, .results table td.code {
+.results table thead.code, .results table td.code {
     width: 15%;
 }
 
-.results table th.title, .results table td.title {
+.results table thead.title, .results table td.title {
     width: 40%;
 }
 
-.results table th.credit, .results table td.credit,
-.results table th.grade, .results table td.grade,
-.results table th.point, .results table td.point {
+.results table thead.credit, .results table td.credit,
+.results table thead.grade, .results table td.grade,
+.results table thead.point, .results table td.point {
     width: 15%;
 }

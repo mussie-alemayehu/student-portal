@@ -1,6 +1,7 @@
 <?php
 require_once "../connection.php";
 
+// prepare an array that will later hold the grades submitted to this page
 $grades = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
