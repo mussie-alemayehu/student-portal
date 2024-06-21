@@ -72,7 +72,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           ?>
         </div>
       <?php endif; ?>
-      <a class="forgot-password" href="">Forgot password?</a><br>
       <input type="submit" name="submit" value="login" class="btn"><br>
     </form>
     <p class="left">Don't have an account?</p>

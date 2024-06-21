@@ -49,16 +49,13 @@
     border-radius: 5px;
 }
 
-.results table thead.code, .results table td.code {
-    width: 15%;
-}
-
 .results table thead.title, .results table td.title {
     width: 40%;
 }
 
 .results table thead.credit, .results table td.credit,
 .results table thead.grade, .results table td.grade,
-.results table thead.point, .results table td.point {
+.results table thead.point, .results table td.point,
+.results table thead.code, .results table td.code {
     width: 15%;
 }
