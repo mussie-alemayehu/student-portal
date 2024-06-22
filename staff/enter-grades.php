@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // handle semester transition for the student here
     $semesters_completed = $result["semesters_completed"] + 1;
     $newyear = $result["year"];
-    if ($semesters_completed % 2 == 0 && $newyear < 4) $newyear++;
+    if ($semesters_completed % 2 == 0 && $newyear <= 4) $newyear++;
 
     // create an array that will hold the success or failure of the update queries
     $success = [];

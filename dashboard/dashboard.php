@@ -26,7 +26,11 @@ if ($stmt->execute()) {
     $full_name = $result["full_name"];
     $department_id = $result["department_id"];
     $college = $result["college"];
-    $year = $result["year"];
+    if ($result["year"] > 4) {
+        $year = "Graduated";
+    } else {
+        $year = $result["year"];
+    }
 }
 
 $stmt->close();
