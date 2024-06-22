@@ -4,6 +4,23 @@ CREATE TABLE students (
     profile_added TINYINT(4)
 );
 
+CREATE TABLE student_information (
+    student_id VARCHAR(255) PRIMARY KEY,
+    full_name VARCHAR(255),
+    email VARCHAR(255),
+    department_id VARCHAR(255),
+    college VARCHAR(255),
+    semesters_completed INT(11),
+    year INT(11),
+    batch INT(11),
+);
+
+
+CREATE TABLE department (
+    department_code VARCHAR(10) PRIMARY KEY,
+    department_name VARCHAR(255) NOT NULL
+);
+
 
 CREATE TABLE student_info (
     student_id VARCHAR(255) PRIMARY KEY,
